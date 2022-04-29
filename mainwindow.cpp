@@ -33,6 +33,8 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+///zmina
 void MainWindow::on_RouletteButton_clicked()
 {
     roulette->show();

@@ -78,7 +78,6 @@ void Authorization::on_EnterButton_clicked()
 
     ui->password->setText("");
 }
-// Just Test Push
 
 void Authorization::on_CheckPass_stateChanged(int arg1)
 {
