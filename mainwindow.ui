@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1040</width>
+    <height>748</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>24</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="RouletteButton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>257</width>
+      <height>259</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background: transparent;
+	background-image: url(:/resources/png/Roulette.png);
+}
+
+QPushButton:hover {
+	background: transparent;
+	background-image: url(:/resources/png/Roulette(color).png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="slotsButton">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>100</y>
+      <width>256</width>
+      <height>256</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background: transparent;
+	background-image: url(:/resources/png/slot.png);
+}
+
+QPushButton:hover {
+	background: transparent;
+	background-image: url(:/resources/png/slot (2).png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BJButton">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>100</y>
+      <width>256</width>
+      <height>256</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background: transparent;
+	background-image: url(:/resources/png/BlackJack.png);
+}
+
+QPushButton:hover {
+	background: transparent;
+	background-image: url(:/resources/png/BlackJack(color).png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="HiLoButton">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>370</y>
+      <width>256</width>
+      <height>260</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background: transparent;
+	background-image: url(:/resources/png/HiLo.png);
+}
+
+QPushButton:hover {
+	background: transparent;
+	background-image: url(:/resources/png/HiLo(color).png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CrashButton">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>370</y>
+      <width>256</width>
+      <height>256</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background: transparent;
+	background-image: url(:/resources/png/Crash.png);
+}
+
+QPushButton:hover {
+	background: transparent;
+	background-image: url(:/resources/png/Crash(color).png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="MinesButton">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>370</y>
+      <width>256</width>
+      <height>258</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background: transparent;
+	background-image: url(:/resources/png/bomb.png);
+}
+
+QPushButton:hover {
+	background: transparent;
+	background-image: url(:/resources/png/bomb(color).png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1040</width>
+     <height>48</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

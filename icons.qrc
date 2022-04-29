@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>png/Icon60x60.png</file>
+        <file>png/IconGr60x60.png</file>
+        <file>png/slot.png</file>
+        <file>png/slot (2).png</file>
+        <file>png/BlackJack(color).png</file>
+        <file>png/BlackJack.png</file>
+        <file>png/HiLo(color).png</file>
+        <file>png/HiLo.png</file>
+        <file>png/Crash(color).png</file>
+        <file>png/Crash.png</file>
+        <file>png/bomb(color).png</file>
+        <file>png/bomb.png</file>
+        <file>png/Roulette(color).png</file>
+        <file>png/Roulette.png</file>
+    </qresource>
+</RCC>
