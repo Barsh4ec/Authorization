@@ -10,6 +10,8 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    accountsettings.cpp \
+    addmoney.cpp \
     blackjack.cpp \
     crash.cpp \
     hilo.cpp \
@@ -19,9 +21,12 @@ SOURCES += \
     minesweeper.cpp \
     registrationwindow.cpp \
     roulette.cpp \
+    settings.cpp \
     slots.cpp
 
 HEADERS += \
+    accountsettings.h \
+    addmoney.h \
     authorization.h \
     blackjack.h \
     crash.h \
@@ -30,9 +35,12 @@ HEADERS += \
     minesweeper.h \
     registrationwindow.h \
     roulette.h \
+    settings.h \
     slots.h
 
 FORMS += \
+    accountsettings.ui \
+    addmoney.ui \
     authorization.ui \
     blackjack.ui \
     crash.ui \
@@ -41,6 +49,7 @@ FORMS += \
     minesweeper.ui \
     registrationwindow.ui \
     roulette.ui \
+    settings.ui \
     slots.ui \
 
 # Default rules for deployment.

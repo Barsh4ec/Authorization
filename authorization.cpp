@@ -42,8 +42,8 @@ void Authorization::on_RegistrationButton_clicked()
 }
 void Authorization::on_EnterButton_clicked()
 {
-    QString login = ui->Login->text();
-    QString password = ui->password->text();
+    login = ui->Login->text();
+    password = ui->password->text();
 
     if(database.open()) {
         qDebug() << "success!";
@@ -64,7 +64,7 @@ void Authorization::on_EnterButton_clicked()
                 if(usernameFromDB == login && passwordFromDB == password) {
                     qDebug() << "login success!";
                     this->close();
-                    mWindow = new MainWindow(this);
+                    mWindow = new MainWindow(this, login, password);
                     mWindow->show();
                 } else {
                     qDebug() << "login failed";
@@ -75,8 +75,6 @@ void Authorization::on_EnterButton_clicked()
         qDebug() << "database connection failed";
     }
 
-
-    ui->password->setText("");
 }
 
 void Authorization::on_CheckPass_stateChanged(int arg1)
@@ -87,4 +85,3 @@ void Authorization::on_CheckPass_stateChanged(int arg1)
         ui-> password-> setEchoMode (QLineEdit :: Password);
     }
 }
-

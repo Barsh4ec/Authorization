@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(QWidget *parent, QString login, QString password) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
@@ -26,6 +26,40 @@ MainWindow::MainWindow(QWidget *parent) :
 
     minesweeper = new Minesweeper();
     connect(minesweeper, &Minesweeper::minesWindow, this, &MainWindow::show);
+
+    addmoney = new AddMoney();
+    connect(addmoney, &AddMoney::addMWindow, this, &AddMoney::show);
+
+    accsett = new AccountSettings();
+    connect(accsett, &AccountSettings::AccountSettWindow, this, &AccountSettings::show);
+
+    settings = new Settings();
+    connect(settings, &Settings::SettingsWindow, this, &Settings::show);
+
+    QString balance = ui->userbalance->text();
+
+    QSqlQuery query(QSqlDatabase::database("MyConnect"));
+    query.prepare(QString("SELECT * FROM Users WHERE login = :login AND password = :password"));
+
+    query.bindValue(":balance", balance);
+    query.bindValue(":login", login);
+    query.bindValue(":password", password);
+
+    if(!query.exec()){
+        qDebug() << "balance_failed";
+    } else {
+        while(query.next()) {
+            QString balanceFromDB = query.value(4).toString();
+            QString usernameFromDB = query.value(1).toString();
+            QString passwordFromDB = query.value(3).toString();
+
+            if(usernameFromDB == login && passwordFromDB == password) {
+                qDebug() << "balance success!";
+                ui->userbalance->setText(balanceFromDB);
+
+            }
+        }
+    }
 }
 
 MainWindow::~MainWindow()
@@ -33,8 +67,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-///zmina
 void MainWindow::on_RouletteButton_clicked()
 {
     roulette->show();
@@ -73,6 +105,27 @@ void MainWindow::on_CrashButton_clicked()
 void MainWindow::on_MinesButton_clicked()
 {
     minesweeper->show();
+    this->close();
+}
+
+
+void MainWindow::on_PopovnytyRachunok_clicked()
+{
+    addmoney->show();
+    this->close();
+}
+
+
+void MainWindow::on_AccountSettings_clicked()
+{
+    accsett->show();
+    this->close();
+}
+
+
+void MainWindow::on_SettingsButon_clicked()
+{
+    settings->show();
     this->close();
 }
 

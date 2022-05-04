@@ -2,12 +2,19 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtSql>
+#include <QSqlDatabase>
+#include <QSqlQuery>
 #include <roulette.h>
 #include <slots.h>
 #include <blackjack.h>
 #include <hilo.h>
 #include <crash.h>
 #include <minesweeper.h>
+#include <addmoney.h>
+#include <accountsettings.h>
+#include <settings.h>
+
 
 namespace Ui {
 class MainWindow;
@@ -18,7 +25,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr, QString = "0", QString = "0");
     ~MainWindow();
 
 private slots:
@@ -34,6 +41,12 @@ private slots:
 
     void on_MinesButton_clicked();
 
+    void on_PopovnytyRachunok_clicked();
+
+    void on_AccountSettings_clicked();
+
+    void on_SettingsButon_clicked();
+
 private:
     Ui::MainWindow *ui;
     Roulette *roulette;
@@ -42,6 +55,9 @@ private:
     HiLo *hilo;
     Crash *crash;
     Minesweeper *minesweeper;
+    AddMoney *addmoney;
+    AccountSettings *accsett;
+    Settings *settings;
 };
 
 #endif // MAINWINDOW_H
