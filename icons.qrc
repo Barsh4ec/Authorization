@@ -14,5 +14,13 @@
         <file>png/bomb.png</file>
         <file>png/Roulette(color).png</file>
         <file>png/Roulette.png</file>
+        <file>png/Popovnennia(color).png</file>
+        <file>png/Popovnennia.png</file>
+        <file>png/Settings(color).png</file>
+        <file>png/Settings.png</file>
+        <file>png/User (2).png</file>
+        <file>png/User(color) 2.png</file>
+        <file>png/User(color).png</file>
+        <file>png/User.png</file>
     </qresource>
 </RCC>

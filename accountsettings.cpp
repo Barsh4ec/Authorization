@@ -13,6 +13,8 @@ AccountSettings::~AccountSettings()
     delete ui;
 }
 
+
+
 void AccountSettings::on_BackToMain_clicked()
 {
     this->close();
