@@ -6,6 +6,7 @@ AccountSettings::AccountSettings(QWidget *parent) :
     ui(new Ui::AccountSettings)
 {
     ui->setupUi(this);
+
 }
 
 AccountSettings::~AccountSettings()
