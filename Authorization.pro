@@ -14,6 +14,7 @@ SOURCES += \
     addmoney.cpp \
     blackjack.cpp \
     crash.cpp \
+    db.cpp \
     hilo.cpp \
     main.cpp \
     authorization.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     authorization.h \
     blackjack.h \
     crash.h \
+    db.h \
     hilo.h \
     mainwindow.h \
     minesweeper.h \
