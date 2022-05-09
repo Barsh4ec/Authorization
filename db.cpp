@@ -22,6 +22,15 @@ void db::db_connect(){
 
 }
 
+QSqlQuery db::query_func(QString s){
+    QSqlQuery query(QSqlDatabase::database("db_con"));
+    query.prepare(QString(s));
+    if(!query.exec()){
+        qDebug() << "query failed";
+    }
+    return query;
+}
+
 db::db()
 {
 

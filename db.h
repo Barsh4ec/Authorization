@@ -9,6 +9,8 @@ class db
 public:
     db();
     void db_connect();
+    QSqlQuery query_func(QString s);
+
 private:
     QSqlDatabase database;
 

@@ -44,7 +44,6 @@ void Authorization::on_EnterButton_clicked()
 {
     login = ui->Login->text();
     password = ui->password->text();
-
     if(database.open()) {
         qDebug() << "success!";
 

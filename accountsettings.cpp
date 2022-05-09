@@ -26,8 +26,10 @@ void AccountSettings::on_BackToMain_clicked()
 
 void AccountSettings::on_button_change_name_clicked()
 {
-    QSqlQuery query(QSqlDatabase::database("db_con"));
-
-
+    QString s = "SELECT * from caligula_users.Users;";
+    QSqlQuery query = database.query_func(s);
+    while(query.next()){
+        QString username = query.value(1).toString();
+        qDebug() << username;
+    }
 }
-
