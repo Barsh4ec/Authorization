@@ -14,12 +14,16 @@ class Slots : public QWidget
 public:
     explicit Slots(QWidget *parent = nullptr);
     ~Slots();
+    QString login;
 
 signals:
     void slotsWindow();
 
 private slots:
     void on_BackToMain_clicked();
+
+public slots:
+    void slot(QString a);
 
 private:
     Ui::Slots *ui;

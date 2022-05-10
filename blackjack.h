@@ -14,12 +14,16 @@ class BlackJack : public QWidget
 public:
     explicit BlackJack(QWidget *parent = nullptr);
     ~BlackJack();
+    QString login;
 
 signals:
     void bjWindow();
 
 private slots:
     void on_BackToMain_clicked();
+
+public slots:
+    void slot(QString a);
 
 private:
     Ui::BlackJack *ui;

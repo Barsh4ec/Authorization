@@ -19,3 +19,8 @@ void AddMoney::on_back_to_main_clicked()
     emit addMWindow();
 }
 
+void AddMoney::slot(QString a)
+{
+    login = a;
+    qDebug() << login;
+}

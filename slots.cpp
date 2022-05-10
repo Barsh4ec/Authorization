@@ -21,3 +21,9 @@ void Slots::on_BackToMain_clicked()
     emit slotsWindow();
 }
 
+void Slots::slot(QString a)
+{
+    login = a;
+    qDebug() << login;
+}
+

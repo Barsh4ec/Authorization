@@ -10,6 +10,12 @@ AccountSettings::AccountSettings(QWidget *parent) :
 
 }
 
+void AccountSettings::slot(QString a)
+{
+    login = a;
+    qDebug() << login;
+}
+
 AccountSettings::~AccountSettings()
 {
     delete ui;
@@ -21,7 +27,6 @@ void AccountSettings::on_BackToMain_clicked()
 {
     this->close();
     emit AccountSettWindow();
-
 }
 
 

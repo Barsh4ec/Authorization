@@ -21,3 +21,8 @@ void Crash::on_BackToMain_clicked()
     emit crashWindow();
 }
 
+void Crash::slot(QString a)
+{
+    login = a;
+    qDebug() << login;
+}

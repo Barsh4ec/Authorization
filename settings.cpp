@@ -19,3 +19,8 @@ void Settings::on_BackToMain_clicked()
     emit SettingsWindow();
 }
 
+void Settings::slot(QString a)
+{
+    login = a;
+    qDebug() << login;
+}

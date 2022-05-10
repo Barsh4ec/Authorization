@@ -27,6 +27,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr, QString = "0", QString = "0");
     ~MainWindow();
+    QString login;
 
 private slots:
     void on_RouletteButton_clicked();
@@ -46,6 +47,17 @@ private slots:
     void on_AccountSettings_clicked();
 
     void on_SettingsButon_clicked();
+
+signals:
+    void roulettesignal(QString);
+    void slotssignal(QString);
+    void bjsignal(QString);
+    void hilosignal(QString);
+    void crashsignal(QString);
+    void minessignal(QString);
+    void addmsignal(QString);
+    void accsignal(QString);
+    void settsignal(QString);
 
 private:
     Ui::MainWindow *ui;

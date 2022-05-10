@@ -14,12 +14,16 @@ class Minesweeper : public QWidget
 public:
     explicit Minesweeper(QWidget *parent = nullptr);
     ~Minesweeper();
+    QString login;
 
 signals:
     void minesWindow();
 
 private slots:
     void on_BackToMain_clicked();
+
+public slots:
+    void slot(QString a);
 
 private:
     Ui::Minesweeper *ui;

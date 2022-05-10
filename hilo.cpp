@@ -21,3 +21,8 @@ void HiLo::on_BackToMain_clicked()
     emit HiLoWindow();
 }
 
+void HiLo::slot(QString a)
+{
+    login = a;
+    qDebug() << login;
+}

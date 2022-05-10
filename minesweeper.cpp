@@ -21,3 +21,8 @@ void Minesweeper::on_BackToMain_clicked()
     emit minesWindow();
 }
 
+void Minesweeper::slot(QString a)
+{
+    login = a;
+    qDebug() << login;
+}

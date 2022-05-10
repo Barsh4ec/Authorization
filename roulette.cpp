@@ -21,3 +21,9 @@ void Roulette::on_BakToMain1_clicked()
     emit fWindow();
 }
 
+void Roulette::slot(QString a)
+{
+    login = a;
+    qDebug() << login;
+}
+

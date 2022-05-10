@@ -40,11 +40,6 @@ QString db::extract_pas(){
     return password;
 }
 
-void db::slot(QString a)
-{
-     login = a;
-}
-
 
 db::db()
 {

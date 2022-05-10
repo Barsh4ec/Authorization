@@ -14,12 +14,16 @@ class Crash : public QWidget
 public:
     explicit Crash(QWidget *parent = nullptr);
     ~Crash();
+    QString login;
 
 signals:
     void crashWindow();
 
 private slots:
     void on_BackToMain_clicked();
+
+public slots:
+    void slot(QString a);
 
 private:
     Ui::Crash *ui;

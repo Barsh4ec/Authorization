@@ -21,3 +21,8 @@ void BlackJack::on_BackToMain_clicked()
     emit bjWindow();
 }
 
+void BlackJack::slot(QString a)
+{
+    login = a;
+    qDebug() << login;
+}

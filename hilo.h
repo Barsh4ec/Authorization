@@ -14,12 +14,16 @@ class HiLo : public QWidget
 public:
     explicit HiLo(QWidget *parent = nullptr);
     ~HiLo();
+    QString login;
 
 signals:
     void HiLoWindow();
 
 private slots:
     void on_BackToMain_clicked();
+
+public slots:
+    void slot(QString a);
 
 private:
     Ui::HiLo *ui;

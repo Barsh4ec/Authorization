@@ -13,8 +13,6 @@ public:
     void get_data(QString login, QString password);
     QString extract_log();
     QString extract_pas();
-public slots:
-    void slot(QString a);
 private:
     QSqlDatabase database;
     QString login;
