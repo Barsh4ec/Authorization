@@ -1,8 +1,7 @@
 #ifndef ACCOUNTSETTINGS_H
 #define ACCOUNTSETTINGS_H
-
-#include <QDialog>
 #include "db.h"
+#include <QDialog>
 namespace Ui {
 class AccountSettings;
 }
@@ -26,6 +25,7 @@ private slots:
 private:
     Ui::AccountSettings *ui;
     db database;
+    QString login;
 };
 
 #endif // ACCOUNTSETTINGS_H

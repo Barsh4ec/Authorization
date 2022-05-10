@@ -63,6 +63,8 @@ void Authorization::on_EnterButton_clicked()
                 if(usernameFromDB == login && passwordFromDB == password) {
                     qDebug() << "login success!";
                     this->close();
+                    db1 =  new db;
+                    connect(this, &Authorization::signal, db1, &db::slot);
                     mWindow = new MainWindow(this, login, password);
                     mWindow->show();
                 } else {

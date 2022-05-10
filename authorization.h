@@ -7,7 +7,7 @@
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QSqlQuery>
-
+#include "db.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Authorization; }
@@ -41,6 +41,8 @@ private:
     RegistrationWindow *sWindow;
     MainWindow *mWindow;
     QSqlDatabase database;
-
+    db *db1;
+signals:
+    void signal(QString);
 };
 #endif // AUTHORIZATION_H
