@@ -301,7 +301,7 @@ QLinneEdit:focus {
 }</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="chang_email">
+   <widget class="QLineEdit" name="change_email">
     <property name="geometry">
      <rect>
       <x>30</x>
