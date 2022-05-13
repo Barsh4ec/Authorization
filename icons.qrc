@@ -22,5 +22,7 @@
         <file>png/User(color) 2.png</file>
         <file>png/User(color).png</file>
         <file>png/User.png</file>
+        <file>png/info(color).png</file>
+        <file>png/info.png</file>
     </qresource>
 </RCC>

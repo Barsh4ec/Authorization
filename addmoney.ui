@@ -119,7 +119,7 @@ p, li { white-space: pre-wrap; }
     <pixmap>C:/Users/vikto/Downloads/Telegram Desktop/money (2).png</pixmap>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="back_to_main">
    <property name="geometry">
     <rect>
      <x>0</x>

@@ -104,7 +104,7 @@ border-radius: 10px;
     <string>Налаштування теми</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Back_To_Authorization">
+  <widget class="QPushButton" name="BackToMain">
    <property name="geometry">
     <rect>
      <x>0</x>

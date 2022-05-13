@@ -28,6 +28,7 @@ public:
     explicit MainWindow(QWidget *parent = nullptr, QString = "0", QString = "0");
     ~MainWindow();
     QString login;
+    QString password;
 
 private slots:
     void on_RouletteButton_clicked();
@@ -49,7 +50,7 @@ private slots:
     void on_SettingsButon_clicked();
 
 signals:
-    void roulettesignal(QString);
+    void roulettesignal(QString, QString);
     void slotssignal(QString);
     void bjsignal(QString);
     void hilosignal(QString);

@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent, QString login, QString password) :
     setWindowTitle("Caligula's Palace");
     this->resize(1040, 800);
     this->login = login;
+    this->password = password;
 
     roulette = new Roulette();
     connect(roulette, &Roulette::fWindow, this, &MainWindow::show);
@@ -79,7 +80,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_RouletteButton_clicked()
 {
-    emit roulettesignal(login);
+    emit roulettesignal(login, password);
     roulette->show();
     this->close();
 }
