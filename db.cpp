@@ -32,13 +32,6 @@ QSqlQuery db::query_func(QString s){
 }
 
 
-QString db::extract_log(){
-    qDebug() << login;
-    return login;
-}
-QString db::extract_pas(){
-    return password;
-}
 
 
 db::db()
