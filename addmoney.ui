@@ -116,7 +116,7 @@ p, li { white-space: pre-wrap; }
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>C:/Users/vikto/Downloads/Telegram Desktop/money (2).png</pixmap>
+    <pixmap>../../Users/vikto/Downloads/Telegram Desktop/money (2).png</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="back_to_main">
@@ -243,7 +243,7 @@ QLinneEdit:focus {
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>C:/Users/vikto/Downloads/Telegram Desktop/money (2).png</pixmap>
+    <pixmap>../../Users/vikto/Downloads/Telegram Desktop/money (2).png</pixmap>
    </property>
   </widget>
  </widget>
