@@ -1,32 +1,1287 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Minesweeper</class>
- <widget class="QWidget" name="Minesweeper">
+ <class>Minesweeper_window</class>
+ <widget class="QWidget" name="Minesweeper_window">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>925</width>
-    <height>546</height>
+    <width>756</width>
+    <height>528</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>756</width>
+    <height>528</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="BackToMain">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>10</y>
-     <width>91</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>back</string>
-   </property>
-  </widget>
+  <layout class="QHBoxLayout" name="horizontalLayout_5">
+   <item>
+    <widget class="QWidget" name="Minesweeper" native="true">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="minimumSize">
+         <size>
+          <width>756</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">position: absolute;
+width: 756px;
+height: 60px;
+left: 0px;
+top: 1px;
+
+background: #C5C5C5;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="minimumSize">
+            <size>
+             <width>31</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>31</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: absolute;
+width: 31.25px;
+height: 25px;
+left: 31.25px;
+top: 43.03px;
+
+background: url(next (1).png);
+transform: rotate(-179.95deg);</string>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="minimumSize">
+            <size>
+             <width>242</width>
+             <height>34</height>
+            </size>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: absolute;
+width: 242px;
+height: 34px;
+left: 258px;
+top: 19px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+
+color: #FFFFFF;
+</string>
+           </property>
+           <property name="text">
+            <string>Minesweeper</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="minimumSize">
+            <size>
+             <width>88</width>
+             <height>29</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">position: absolute;
+width: 88px;
+height: 29px;
+left: 626px;
+top: 19px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+text-align: right;
+
+color: #FFFFFF;</string>
+           </property>
+           <property name="text">
+            <string>0.00 Denarius</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <spacer name="horizontalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>128</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="pushButton_10">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QPushButton" name="pushButton_16">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QPushButton" name="pushButton_12">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4">
+           <widget class="QPushButton" name="pushButton_11">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButton_9">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="pushButton_15">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QPushButton" name="pushButton_13">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="pushButton_8">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="pushButton_14">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_7">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>90</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">height: 90px;
+width: 90px;
+left: 324px;
+top: 75px;
+border-radius: 10px;
+background-color: rgb(46, 229, 157);
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_10">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>128</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>238</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="1">
+           <widget class="QFrame" name="frame_2">
+            <property name="minimumSize">
+             <size>
+              <width>260</width>
+              <height>31</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>260</width>
+              <height>42</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: absolute;
+width: 260px;
+height: 31px;
+left: 249px;
+top: 380px;
+
+background: #C5C5C5;
+border-radius: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="minimumSize">
+                <size>
+                 <width>81</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>81</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">position: absolute;
+width: 89px;
+height: 15px;
+left: 258px;
+top: 390px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+</string>
+               </property>
+               <property name="text">
+                <string>Кількість бомб</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="minimumSize">
+                <size>
+                 <width>43</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>48</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">position: absolute;
+width: 43px;
+height: 23px;
+left: 357px;
+top: 385px;
+
+background: #646464;
+border-radius: 10px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+
+color: #FFFFFF;
+</string>
+               </property>
+               <property name="text">
+                <string>1</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_17">
+               <property name="minimumSize">
+                <size>
+                 <width>47</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>47</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">position: absolute;
+width: 45px;
+height: 24px;
+left: 406px;
+top: 382px;
+
+background: #07D1DE;
+border-radius: 10px;</string>
+               </property>
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_18">
+               <property name="minimumSize">
+                <size>
+                 <width>48</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>48</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">position: absolute;
+width: 45px;
+height: 24px;
+left: 406px;
+top: 382px;
+
+background: #07D1DE;
+border-radius: 10px;</string>
+               </property>
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>238</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="0">
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>38</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="1">
+           <widget class="QFrame" name="frame_3">
+            <property name="minimumSize">
+             <size>
+              <width>648</width>
+              <height>75</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>648</width>
+              <height>75</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: absolute;
+width: 648px;
+height: 75px;
+left: 54px;
+top: 418px;
+
+background: #C5C5C5;
+border-radius: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="1" column="2">
+              <widget class="QLabel" name="label_10">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">position: absolute;
+width: 100px;
+height: 30px;
+left: 374px;
+top: 502px;
+
+background: #646464;
+border-radius: 5px;</string>
+               </property>
+               <property name="text">
+                <string>0.0</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1" rowspan="2">
+              <widget class="QPushButton" name="pushButton_19">
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">position: absolute;
+border-radius: 10px;
+background: #07D1DE;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+color: #FFFFFF;</string>
+               </property>
+               <property name="text">
+                <string>Грати</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLineEdit" name="lineEdit">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">position: absolute;
+width: 90px;
+height: 30px;
+left: 253px;
+top: 446px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+
+color: #FFFFFF;
+
+position: absolute;
+width: 90px;
+height: 30px;
+left: 233px;
+top: 440px;
+
+background: #646464;
+border-radius: 5px;
+</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_6">
+               <property name="minimumSize">
+                <size>
+                 <width>82</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">position: absolute;
+width: 82px;
+height: 20px;
+left: 236px;
+top: 419px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+opacity: 0.9;</string>
+               </property>
+               <property name="text">
+                <string>Сума ставки</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="label_7">
+               <property name="minimumSize">
+                <size>
+                 <width>73</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>73</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">position: absolute;
+width: 82px;
+height: 20px;
+left: 236px;
+top: 419px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+opacity: 0.9;</string>
+               </property>
+               <property name="text">
+                <string>Коефіцієнт</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>48</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="0" column="1">
+           <widget class="QFrame" name="frame_4">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">position: absolute;
+width: 200px;
+height: 36px;
+left: 279px;
+top: 499px;
+
+background: #C5C5C5;
+border-radius: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_8">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">position: absolute;
+width: 100px;
+height: 30px;
+left: 374px;
+top: 502px;
+
+background: #646464;
+border-radius: 5px;</string>
+               </property>
+               <property name="text">
+                <string>0.0</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_5">
+               <property name="minimumSize">
+                <size>
+                 <width>67</width>
+                 <height>22</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>67</width>
+                 <height>22</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">position: absolute;
+width: 67px;
+height: 22px;
+left: 287px;
+top: 506px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+opacity: 0.9;</string>
+               </property>
+               <property name="text">
+                <string>Баланс</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>268</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>258</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+  <zorder>frame</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>pushButton_4</zorder>
+  <zorder>pushButton_5</zorder>
+  <zorder>pushButton_6</zorder>
+  <zorder>pushButton_7</zorder>
+  <zorder>pushButton_8</zorder>
+  <zorder>pushButton_9</zorder>
+  <zorder>pushButton_10</zorder>
+  <zorder>pushButton_11</zorder>
+  <zorder>pushButton_12</zorder>
+  <zorder>pushButton_13</zorder>
+  <zorder>pushButton_14</zorder>
+  <zorder>pushButton_15</zorder>
+  <zorder>pushButton_16</zorder>
+  <zorder>frame_2</zorder>
+  <zorder>frame_3</zorder>
+  <zorder>frame_4</zorder>
+  <zorder></zorder>
+  <zorder></zorder>
+  <zorder>horizontalSpacer_3</zorder>
+  <zorder>horizontalSpacer_5</zorder>
+  <zorder>horizontalSpacer_7</zorder>
+  <zorder>horizontalSpacer_9</zorder>
+  <zorder>horizontalSpacer_10</zorder>
+  <zorder>horizontalSpacer_4</zorder>
+  <zorder>horizontalSpacer_6</zorder>
+  <zorder>horizontalSpacer_8</zorder>
+  <zorder>Minesweeper</zorder>
  </widget>
+ <tabstops>
+  <tabstop>pushButton_19</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>pushButton_6</tabstop>
+  <tabstop>pushButton_7</tabstop>
+  <tabstop>pushButton_8</tabstop>
+  <tabstop>pushButton_9</tabstop>
+  <tabstop>pushButton_10</tabstop>
+  <tabstop>pushButton_11</tabstop>
+  <tabstop>pushButton_12</tabstop>
+  <tabstop>pushButton_13</tabstop>
+  <tabstop>pushButton_14</tabstop>
+  <tabstop>pushButton_15</tabstop>
+  <tabstop>pushButton_16</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_17</tabstop>
+  <tabstop>pushButton_18</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>pushButton_20</tabstop>
+  <tabstop>pushButton_21</tabstop>
+  <tabstop>pushButton_22</tabstop>
+  <tabstop>pushButton_23</tabstop>
+  <tabstop>pushButton_24</tabstop>
+  <tabstop>pushButton_25</tabstop>
+  <tabstop>pushButton_26</tabstop>
+  <tabstop>pushButton_27</tabstop>
+  <tabstop>pushButton_28</tabstop>
+  <tabstop>pushButton_29</tabstop>
+  <tabstop>pushButton_30</tabstop>
+  <tabstop>pushButton_31</tabstop>
+  <tabstop>pushButton_32</tabstop>
+  <tabstop>pushButton_33</tabstop>
+  <tabstop>pushButton_34</tabstop>
+  <tabstop>pushButton_35</tabstop>
+  <tabstop>pushButton_36</tabstop>
+  <tabstop>pushButton_37</tabstop>
+  <tabstop>pushButton_38</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
