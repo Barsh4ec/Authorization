@@ -41,29 +41,7 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-border-radius: 10px;
-  text-decoration: none;
-  width: 140px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 45px;
-  margin: 10px 20px;
-
-
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: #524f4e;
-  background: white;
-border-radius: 15px;
-}
-QPushButton:hover {
-border-radius: 15px;
-  background: #2EE59D;
-  color: white;
-}</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Поповнити</string>
@@ -188,20 +166,7 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit {
-    border: 2px sold #2EE59D;
-	border-radius: 20px;
-	color: #524f4e;
-	padding-left: 20px;
-	padding-right: 20px;
-	background-color: white;
-}
-QLineEdit:hover {
-	border: 2px solid #2EE59D;
-}
-QLinneEdit:focus {
-	border: 2px solid #2EE59D
-}</string>
+    <string notr="true"/>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_2">
@@ -214,20 +179,7 @@ QLinneEdit:focus {
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit {
-    border: 2px sold #2EE59D;
-	border-radius: 20px;
-	color: #524f4e;
-	padding-left: 20px;
-	padding-right: 20px;
-	background-color: white;
-}
-QLineEdit:hover {
-	border: 2px solid #2EE59D;
-}
-QLinneEdit:focus {
-	border: 2px solid #2EE59D
-}</string>
+    <string notr="true"/>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">

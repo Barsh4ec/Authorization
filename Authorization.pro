@@ -54,11 +54,17 @@ FORMS += \
     settings.ui \
     slots.ui \
 
+TRANSLATIONS += lang_uk.ts
+TRANSLATIONS += lang_en.ts
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    icons.qrc \
-    rosource.qrc
+StyleSheet.qrc \
+icons.qrc \
+    lang.qrc \
+lang.qrc \
+rosource.qrc

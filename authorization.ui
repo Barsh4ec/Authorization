@@ -38,7 +38,7 @@
       <x>175</x>
       <y>380</y>
       <width>251</width>
-      <height>71</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -54,28 +54,7 @@
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton {
-border-radius: 10px;
-  text-decoration: none;
-  width: 140px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 45px;
-  margin: 10px 20px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: #524f4e;
-  background: white;
-border-radius: 15px;
-}
-QPushButton:hover {
-border-radius: 10px;
-  background: #2EE59D;
-
-  color: white;
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Реєстрація</string>
@@ -87,7 +66,7 @@ border-radius: 10px;
       <x>175</x>
       <y>300</y>
       <width>251</width>
-      <height>71</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -103,29 +82,7 @@ border-radius: 10px;
      <bool>true</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton {
-border-radius: 10px;
-  text-decoration: none;
-  width: 140px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 45px;
-  margin: 10px 20px;
-
-
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: #524f4e;
-  background: white;
-border-radius: 15px;
-}
-QPushButton:hover {
-border-radius: 10px;
-  background: #2EE59D;
-  color: white;
-}</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Увійти</string>
@@ -134,9 +91,9 @@ border-radius: 10px;
    <widget class="QLineEdit" name="Login">
     <property name="geometry">
      <rect>
-      <x>195</x>
+      <x>175</x>
       <y>170</y>
-      <width>211</width>
+      <width>251</width>
       <height>40</height>
      </rect>
     </property>
@@ -147,28 +104,15 @@ border-radius: 10px;
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLineEdit {
-    border: 2px sold #2EE59D;
-	border-radius: 20px;
-	color: #524f4e;
-	padding-left: 20px;
-	padding-right: 20px;
-	background-color: white;
-}
-QLineEdit:hover {
-	border: 2px solid #2EE59D
-}
-QLinneEdit:focus {
-	border: 2px solid rgb(42, 44, 54)
-}</string>
+     <string notr="true"/>
     </property>
    </widget>
    <widget class="QLineEdit" name="password">
     <property name="geometry">
      <rect>
-      <x>195</x>
+      <x>175</x>
       <y>240</y>
-      <width>211</width>
+      <width>251</width>
       <height>40</height>
      </rect>
     </property>
@@ -179,20 +123,7 @@ QLinneEdit:focus {
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLineEdit {
-    border: 2px sold #2EE59D;
-	border-radius: 20px;
-	color: #524f4e;
-	padding-left: 20px;
-	padding-right: 20px;
-	background-color: white;
-}
-QLineEdit:hover {
-	border: 2px solid #2EE59D
-}
-QLinneEdit:focus {
-	border: 2px solid rgb(42, 44, 54)
-}</string>
+     <string notr="true"/>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -219,7 +150,7 @@ QLinneEdit:focus {
    <widget class="QCheckBox" name="CheckPass">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>430</x>
       <y>250</y>
       <width>121</width>
       <height>22</height>
@@ -230,6 +161,24 @@ QLinneEdit:focus {
     </property>
     <property name="text">
      <string>Показати пароль</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="information">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>460</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>

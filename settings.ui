@@ -17,34 +17,13 @@
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>180</y>
+     <y>160</y>
      <width>271</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-border-radius: 10px;
-  text-decoration: none;
-  width: 140px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 45px;
-  margin: 10px 20px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: #524f4e;
-  background: white;
-border-radius: 15px;
-}
-QPushButton:hover {
-border-radius: 10px;
-  background: #2EE59D;
-
-  color: white;
-}</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Налаштування мови</string>
@@ -77,28 +56,7 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-border-radius: 10px;
-  text-decoration: none;
-  width: 140px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 45px;
-  margin: 10px 20px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: #524f4e;
-  background: white;
-border-radius: 15px;
-}
-QPushButton:hover {
-border-radius: 10px;
-  background: #2EE59D;
-
-  color: white;
-}</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Налаштування теми</string>

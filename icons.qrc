@@ -32,5 +32,10 @@
         <file>png/Crash(norm_colored).png</file>
         <file>png/HiLo (norm_colored).png</file>
         <file>png/HiLo(norm).png</file>
+        <file>png/info_color.png</file>
+        <file>png/Pointer.png</file>
+        <file>png/Roulette_wheel.png</file>
+        <file>png/undo.png</file>
+        <file>png/undo_color.png</file>
     </qresource>
 </RCC>
