@@ -24,5 +24,13 @@
         <file>png/User.png</file>
         <file>png/info(color).png</file>
         <file>png/info.png</file>
+        <file>png/money.png</file>
+        <file>png/money_color.png</file>
+        <file>png/setting_norm.png</file>
+        <file>png/setting_norm_color.png</file>
+        <file>png/Crash(norm).png</file>
+        <file>png/Crash(norm_colored).png</file>
+        <file>png/HiLo (norm_colored).png</file>
+        <file>png/HiLo(norm).png</file>
     </qresource>
 </RCC>
