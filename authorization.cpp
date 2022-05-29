@@ -68,6 +68,8 @@ void Authorization::on_EnterButton_clicked()
                     qDebug() << "login failed";
                 }
             }
+        ui->information->setStyleSheet("color: #696969;");
+        ui->information->setText("Неправильний логін або пароль!");
         }
     } else {
         qDebug() << "database connection failed";

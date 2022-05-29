@@ -65,6 +65,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
 StyleSheet.qrc \
 icons.qrc \
-    lang.qrc \
 lang.qrc \
-rosource.qrc
+rosource.qrc \

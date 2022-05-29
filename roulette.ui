@@ -185,6 +185,9 @@ QPushButton:hover {
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="history2">
       <property name="geometry">
@@ -197,6 +200,9 @@ QPushButton:hover {
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="history3">
@@ -211,6 +217,9 @@ QPushButton:hover {
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="history4">
       <property name="geometry">
@@ -223,6 +232,9 @@ QPushButton:hover {
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="history5">
@@ -237,6 +249,9 @@ QPushButton:hover {
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="history6">
       <property name="geometry">
@@ -249,6 +264,9 @@ QPushButton:hover {
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="history7">
@@ -263,6 +281,9 @@ QPushButton:hover {
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="history8">
       <property name="geometry">
@@ -275,6 +296,9 @@ QPushButton:hover {
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>

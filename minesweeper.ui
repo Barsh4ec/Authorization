@@ -736,22 +736,13 @@ color: #FFFFFF;
               </property>
               <property name="styleSheet">
                <string notr="true">position: absolute;
-width: 43px;
-height: 23px;
-left: 357px;
-top: 385px;
+width: 100px;
+height: 30px;
+left: 374px;
+top: 502px;
 
 background: #646464;
-border-radius: 10px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-text-align: center;
-
-color: #FFFFFF;
+border-radius: 5px;
 </string>
               </property>
               <property name="text">
