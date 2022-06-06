@@ -44,8 +44,6 @@ void Authorization::on_EnterButton_clicked()
     login = ui->Login->text();
     password = ui->password->text();
     if(database.open()) {
-        qDebug() << "success!";
-
         QSqlQuery query(QSqlDatabase::database("MyConnect"));
         query.prepare(QString("SELECT * FROM Users WHERE login = :login AND password = :password"));
 
@@ -60,7 +58,6 @@ void Authorization::on_EnterButton_clicked()
                 QString passwordFromDB = query.value(3).toString();
 
                 if(usernameFromDB == login && passwordFromDB == password) {
-                    qDebug() << "login success!";
                     this->close();
                     mWindow = new MainWindow(this, login, password);
                     mWindow->show();

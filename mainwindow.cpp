@@ -65,7 +65,6 @@ MainWindow::MainWindow(QWidget *parent, QString login, QString password) :
             QString passwordFromDB = query.value(3).toString();
 
             if(usernameFromDB == login && passwordFromDB == password) {
-                qDebug() << "balance success!";
                 ui->userbalance->setText(balanceFromDB);
 
             }
@@ -88,7 +87,7 @@ void MainWindow::on_RouletteButton_clicked()
 
 void MainWindow::on_slotsButton_clicked()
 {
-    emit slotssignal(login);
+    emit slotssignal(login, password);
     slotte->show();
     this->close();
 }
@@ -112,7 +111,7 @@ void MainWindow::on_HiLoButton_clicked()
 
 void MainWindow::on_CrashButton_clicked()
 {
-    emit crashsignal(login);
+    emit crashsignal(login, password);
     crash->show();
     this->close();
 }

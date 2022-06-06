@@ -37,5 +37,14 @@
         <file>png/Roulette_wheel.png</file>
         <file>png/undo.png</file>
         <file>png/undo_color.png</file>
+        <file>png/Explosion.png</file>
+        <file>png/10.png</file>
+        <file>png/Bar.png</file>
+        <file>png/Cherry.png</file>
+        <file>png/Crown.png</file>
+        <file>png/Diamond.png</file>
+        <file>png/lemon.png</file>
+        <file>png/Seven.png</file>
+        <file>png/Watermelon.png</file>
     </qresource>
 </RCC>

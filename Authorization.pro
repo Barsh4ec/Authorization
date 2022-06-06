@@ -67,3 +67,4 @@ StyleSheet.qrc \
 icons.qrc \
 lang.qrc \
 rosource.qrc \
+    text_files.qrc

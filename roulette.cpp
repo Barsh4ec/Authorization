@@ -40,7 +40,6 @@ Roulette::~Roulette()
 void Roulette::TimerSlot()
 {
    time++;
-   ui->label->setText(QString::number(time));
 }
 static int randomBetween(int low, int high)
 {

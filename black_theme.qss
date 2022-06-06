@@ -36,7 +36,6 @@ QLabel
 {
 	background-color: transparent;
 	color: #fff;
-
 }
 
 

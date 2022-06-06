@@ -51,10 +51,10 @@ private slots:
 
 signals:
     void roulettesignal(QString, QString);
-    void slotssignal(QString);
+    void slotssignal(QString, QString);
     void bjsignal(QString);
     void hilosignal(QString);
-    void crashsignal(QString);
+    void crashsignal(QString, QString);
     void minessignal(QString);
     void addmsignal(QString);
     void accsignal(QString);
