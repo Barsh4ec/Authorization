@@ -46,5 +46,21 @@
         <file>png/lemon.png</file>
         <file>png/Seven.png</file>
         <file>png/Watermelon.png</file>
+        <file>Cards/2-bubna.png</file>
+        <file>Cards/3-bubna.png</file>
+        <file>Cards/4-bubna.png</file>
+        <file>Cards/5-bubna.png</file>
+        <file>Cards/6-bubna.png</file>
+        <file>Cards/7-bubna.png</file>
+        <file>Cards/8-bubna.png</file>
+        <file>Cards/9-bubna.png</file>
+        <file>Cards/10-bubna.png</file>
+        <file>Cards/11-bubna.png</file>
+        <file>Cards/12-bubna.png</file>
+        <file>Cards/13-bubna.png</file>
+        <file>Cards/14-bubna.png</file>
+        <file>png/information.png</file>
+        <file>png/money-bag.png</file>
+        <file>png/money-bag1.png</file>
     </qresource>
 </RCC>

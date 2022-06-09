@@ -11,11 +11,21 @@ Crash::Crash(QWidget *parent) :
     this->resize(1040, 700);
     ui->summa_stavky->setPlaceholderText ("Сума ставки");
     ui->summa_stavky->setText(stavka);
+    time = 0;
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(TimerSlot()));
+    timer->start(10);
 }
 
 Crash::~Crash()
 {
     delete ui;
+}
+
+void Crash::TimerSlot()
+{
+    time++;
+    ui->Result->setText(QString::number(time));
 }
 
 void Crash::on_BackToMain_clicked()

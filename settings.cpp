@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include <QApplication>
 #include <QProcess>
+#include <QCoreApplication>
 
 Settings::Settings(QWidget *parent) :
     QDialog(parent),

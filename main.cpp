@@ -3,6 +3,7 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QFile>
+#include <QCoreApplication>
 
 int main(int argc, char *argv[])
 {

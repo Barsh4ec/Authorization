@@ -74,6 +74,7 @@ public:
     void Speen_Wheel(int);
     int MakeTime(int, int);
     void Timer(int);
+    bool start_stop = false;
 
 signals:
     void fWindow();

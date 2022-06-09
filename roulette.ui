@@ -20,131 +20,13 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: #544475;</string>
+   <string notr="true"/>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" colspan="4">
-    <widget class="QWidget" name="widget" native="true">
-     <property name="minimumSize">
-      <size>
-       <width>1022</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>65</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background: qlineargradient(spread:pad, x1:1, y1:0, x2:0.318, y2:1, stop:0 rgba(0, 16, 23, 255), stop:1 rgba(87, 55, 81, 255))</string>
-     </property>
-     <widget class="QPushButton" name="BackToMain">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>50</width>
-        <height>62</height>
-       </rect>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>50</width>
-        <height>62</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton{
-	background: transparent;
-	background-image: url(:/resources/png/undo.png);
-	border-style: solid;
-    border-width: 0px;
-	border-color: #051a39;
-}
-
-QPushButton:hover {
-	background: transparent;
-	background-image: url(:/resources/png/undo_color.png);
-	border-style: solid;
-    border-width: 0px;
-	border-color: #051a39;
-}</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="userbalance">
-      <property name="geometry">
-       <rect>
-        <x>810</x>
-        <y>13</y>
-        <width>121</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background: rgb(177, 167, 255);
-font: 16pt &quot;Tahoma&quot;;
-border-radius: 5px;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </widget>
-   </item>
-   <item row="1" column="3">
-    <widget class="QPushButton" name="info">
-     <property name="minimumSize">
-      <size>
-       <width>32</width>
-       <height>32</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>32</width>
-       <height>32</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton{
-	background: transparent;
-	background-image: url(:/resources/png/info.png);
-	border-style: solid;
-    border-width: 0px;
-	border-color: #051a39;
-}
-
-QPushButton:hover {
-	background: transparent;
-	background-image: url(:/resources/png/info_color.png);
-	border-style: solid;
-    border-width: 0px;
-	border-color: #051a39;
-}</string>
-     </property>
+   <item row="1" column="1">
+    <widget class="QLabel" name="label">
      <property name="text">
       <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="0" rowspan="2">
-    <widget class="QGraphicsView" name="graphicsView">
-     <property name="minimumSize">
-      <size>
-       <width>465</width>
-       <height>458</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>458</width>
-       <height>600</height>
-      </size>
      </property>
     </widget>
    </item>
@@ -161,15 +43,11 @@ QPushButton:hover {
      </property>
     </spacer>
    </item>
-   <item row="1" column="1">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
    <item row="3" column="2">
     <widget class="QWidget" name="widget_3" native="true">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <widget class="QLabel" name="history1">
       <property name="geometry">
        <rect>
@@ -303,6 +181,42 @@ QPushButton:hover {
      </widget>
     </widget>
    </item>
+   <item row="1" column="3">
+    <widget class="QPushButton" name="info">
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background: transparent;
+	background-image: url(:/resources/png/info.png);
+	border-style: solid;
+    border-width: 0px;
+	border-color: #051a39;
+}
+
+QPushButton:hover {
+	background: transparent;
+	background-image: url(:/resources/png/information.png);
+	border-style: solid;
+    border-width: 0px;
+	border-color: #051a39;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
    <item row="2" column="2">
     <widget class="QWidget" name="widget_2" native="true">
      <property name="enabled">
@@ -315,7 +229,7 @@ QPushButton:hover {
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true"> background: #7272A7;
+      <string notr="true"> background: #14C38E;
 border-radius: 20px;</string>
      </property>
      <widget class="QPushButton" name="min_value_button">
@@ -329,7 +243,8 @@ border-radius: 20px;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">border-radius: 5px;
-background: #3D2C8D;</string>
+background: #E3FCBF;
+color:black;</string>
       </property>
       <property name="text">
        <string>min</string>
@@ -346,7 +261,8 @@ background: #3D2C8D;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">border-radius: 5px;
-background: #3D2C8D;</string>
+background: #E3FCBF;
+color:black;</string>
       </property>
       <property name="text">
        <string>x2</string>
@@ -363,7 +279,8 @@ background: #3D2C8D;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">border-radius: 5px;
-background: #3D2C8D;</string>
+background: #E3FCBF;
+color:black;</string>
       </property>
       <property name="text">
        <string>1/2</string>
@@ -380,7 +297,8 @@ background: #3D2C8D;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">border-radius: 5px;
-background: #3D2C8D;</string>
+background: #E3FCBF;
+color:black;</string>
       </property>
       <property name="text">
        <string>max</string>
@@ -397,7 +315,8 @@ background: #3D2C8D;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">border-radius: 5px;
-background: #3D2C8D;</string>
+background: #E3FCBF;
+color:black;</string>
       </property>
       <property name="text">
        <string>-</string>
@@ -414,7 +333,8 @@ background: #3D2C8D;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">border-radius: 5px;
-background: #7E5EA0</string>
+background: #E3FCBF;
+color:black;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="plus_value_button">
@@ -428,7 +348,8 @@ background: #7E5EA0</string>
       </property>
       <property name="styleSheet">
        <string notr="true">border-radius: 5px;
-background: #3D2C8D;</string>
+background: #E3FCBF;
+color:black;</string>
       </property>
       <property name="text">
        <string>+</string>
@@ -496,6 +417,135 @@ border-radius: 15px;</string>
       </property>
       <property name="text">
        <string/>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="2" column="0" rowspan="2">
+    <widget class="QGraphicsView" name="graphicsView">
+     <property name="minimumSize">
+      <size>
+       <width>465</width>
+       <height>458</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>458</width>
+       <height>600</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="4">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>65</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>65</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: #14C38E</string>
+     </property>
+     <widget class="QPushButton" name="BackToMain">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>50</width>
+        <height>62</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>62</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background: transparent;
+	background-image: url(:/resources/png/Icon60x60.png);
+}
+
+QPushButton:hover {
+	background: transparent;
+	background-image: url(:/resources/png/IconGr60x60.png);
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="userbalance">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>13</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #E3FCBF;
+font: 16pt &quot;Tahoma&quot;;
+border-radius: 5px;
+color:#c5c5c5;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>20</y>
+        <width>242</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>242</width>
+        <height>34</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">position: absolute;
+width: 242px;
+height: 34px;
+left: 258px;
+top: 19px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+
+color: black;
+</string>
+      </property>
+      <property name="text">
+       <string>Roulette</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>

@@ -6,6 +6,7 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include "db.h"
+#include <QTimer>
 
 namespace Ui {
 class Crash;
@@ -29,6 +30,8 @@ signals:
     void crashWindow();
 
 private slots:
+    void TimerSlot();
+
     void on_BackToMain_clicked();
 
     void on_min_value_button_clicked();
@@ -55,6 +58,8 @@ public slots:
 private:
     db database;
     Ui::Crash *ui;
+    QTimer *timer;
+    int time;
 };
 
 #endif // CRASH_H

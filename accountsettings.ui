@@ -86,6 +86,9 @@ QPushButton:hover {
              <height>61</height>
             </size>
            </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -117,7 +120,7 @@ QPushButton:hover {
             <string notr="true">color: #696969;</string>
            </property>
            <property name="text">
-            <string>Налаштування акаунту</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Налаштування акаунту&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
@@ -157,6 +160,25 @@ QPushButton:hover {
           </spacer>
          </item>
         </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </item>
        <item>
         <spacer name="verticalSpacer">
@@ -201,8 +223,14 @@ QPushButton:hover {
             <widget class="QLineEdit" name="change_name">
              <property name="minimumSize">
               <size>
-               <width>211</width>
-               <height>40</height>
+               <width>261</width>
+               <height>41</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>261</width>
+               <height>41</height>
               </size>
              </property>
              <property name="styleSheet">
@@ -211,7 +239,32 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QPushButton" name="button_change_name">
+             <property name="minimumSize">
+              <size>
+               <width>261</width>
+               <height>65</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>261</width>
+               <height>65</height>
+              </size>
+             </property>
              <property name="font">
               <font>
                <pointsize>12</pointsize>
@@ -229,11 +282,30 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QLineEdit" name="change_pas">
              <property name="minimumSize">
               <size>
-               <width>211</width>
-               <height>40</height>
+               <width>261</width>
+               <height>41</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>261</width>
+               <height>41</height>
               </size>
              </property>
              <property name="styleSheet">
@@ -242,8 +314,27 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QPushButton" name="button_change_pas">
              <property name="minimumSize">
+              <size>
+               <width>261</width>
+               <height>65</height>
+              </size>
+             </property>
+             <property name="maximumSize">
               <size>
                <width>261</width>
                <height>65</height>
@@ -266,11 +357,30 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QLineEdit" name="change_email">
              <property name="minimumSize">
               <size>
-               <width>211</width>
-               <height>40</height>
+               <width>261</width>
+               <height>41</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>261</width>
+               <height>41</height>
               </size>
              </property>
              <property name="styleSheet">
@@ -279,8 +389,27 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QPushButton" name="button_change_email">
              <property name="minimumSize">
+              <size>
+               <width>261</width>
+               <height>65</height>
+              </size>
+             </property>
+             <property name="maximumSize">
               <size>
                <width>261</width>
                <height>65</height>
@@ -303,8 +432,27 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
+            <spacer name="verticalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QPushButton" name="button_exit">
              <property name="minimumSize">
+              <size>
+               <width>261</width>
+               <height>65</height>
+              </size>
+             </property>
+             <property name="maximumSize">
               <size>
                <width>261</width>
                <height>65</height>

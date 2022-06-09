@@ -2,5 +2,6 @@
     <qresource prefix="/"/>
     <qresource prefix="/new/prefix1">
         <file>lang_config.txt</file>
+        <file>theme_config.txt.txt</file>
     </qresource>
 </RCC>

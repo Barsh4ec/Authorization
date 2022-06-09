@@ -44,6 +44,8 @@ private slots:
 
 
 
+    void on_info_clicked();
+
 public slots:
     void slot(QString a, QString b);
     void RandomGenerate();

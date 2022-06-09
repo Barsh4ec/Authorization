@@ -252,6 +252,35 @@ QLinneEdit:focus {
     <string>Показати пароль</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="Back_To_Authorization_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>280</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background: transparent;
+	background-image: url(:/resources/png/Icon60x60.png);
+}
+
+QPushButton:hover {
+	background: transparent;
+	background-image: url(:/resources/png/IconGr60x60.png);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

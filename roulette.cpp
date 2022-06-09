@@ -120,6 +120,8 @@ void Roulette::slot(QString a, QString b)
 
 void Roulette::on_plus_value_button_clicked()
 {
+    if(start_stop == true)
+        return;
     if (stavka.toDouble() < this->money.toDouble())
     {
         ui->warning->setText("");
@@ -133,6 +135,8 @@ void Roulette::on_plus_value_button_clicked()
 
 void Roulette::on_minus_value_button_clicked()
 {
+    if(start_stop == true)
+        return;
     if (stavka.toDouble() >= 2)
     {
         ui->warning->setText("");
@@ -146,6 +150,8 @@ void Roulette::on_minus_value_button_clicked()
 
 void Roulette::on_max_value_button_clicked()
 {
+    if(start_stop == true)
+        return;
     ui->warning->setText("");
     stavka = QString::number(money.toDouble());
     ui->summa_stavky->setText(stavka);
@@ -154,6 +160,8 @@ void Roulette::on_max_value_button_clicked()
 
 void Roulette::on_half_value_button_clicked()
 {
+    if(start_stop == true)
+        return;
     if (stavka.toDouble() >= 2)
     {
         ui->warning->setText("");
@@ -167,6 +175,8 @@ void Roulette::on_half_value_button_clicked()
 
 void Roulette::on_x2_value_button_clicked()
 {
+    if(start_stop == true)
+        return;
     if ((stavka.toDouble() * 2.0) <= this->money.toDouble())
     {
         ui->warning->setText("");
@@ -180,6 +190,8 @@ void Roulette::on_x2_value_button_clicked()
 
 void Roulette::on_min_value_button_clicked()
 {
+    if(start_stop == true)
+        return;
     ui->warning->setText("");
     stavka = QString::number(1);
     ui->summa_stavky->setText(stavka);
@@ -188,15 +200,23 @@ void Roulette::on_min_value_button_clicked()
 
 void Roulette::on_bet_on_red_clicked()
 {
-    if ((stavka.toDouble()) <= this->money.toDouble())
+    if(start_stop == true)
+        return;
+    stavka = ui->summa_stavky->text();
+    if ((stavka.toDouble()) > this->money.toDouble())
     {
-        ui->warning->setText("");
-    } else {
         ui->warning->setText("Недостатньо грошей!");
         return;
     }
+    if ((stavka.toDouble()) <= 0)
+    {
+        ui->warning->setText("Ставка не може бути нижчою одиниці!");
+        return;
+    }else {
+        ui->warning->setText("");
+    }
 
-
+    start_stop = true;
     tmp1 = tmp2;
     int random = randomBetween(0, 14);
     tmp2 = random;
@@ -269,20 +289,29 @@ void Roulette::on_bet_on_red_clicked()
             }
         }
     }
+    start_stop = false;
 }
 
 
 void Roulette::on_bet_on_black_clicked()
 {
-    if ((stavka.toDouble()) <= this->money.toDouble())
+    if(start_stop == true)
+        return;
+    stavka = ui->summa_stavky->text();
+    if ((stavka.toDouble()) > this->money.toDouble())
     {
-        ui->warning->setText("");
-    } else {
         ui->warning->setText("Недостатньо грошей!");
         return;
     }
+    if ((stavka.toDouble()) <= 0)
+    {
+        ui->warning->setText("Ставка не може бути нижчою одиниці!");
+        return;
+    }else {
+        ui->warning->setText("");
+    }
 
-
+    start_stop = true;
     tmp1 = tmp2;
     int random = randomBetween(0, 14);
     tmp2 = random;
@@ -354,20 +383,29 @@ void Roulette::on_bet_on_black_clicked()
             }
         }
     }
+    start_stop = false;
 }
 
 
 void Roulette::on_bet_on_green_clicked()
 {
-    if ((stavka.toDouble()) <= this->money.toDouble())
+    if(start_stop == true)
+        return;
+    stavka = ui->summa_stavky->text();
+    if ((stavka.toDouble()) > this->money.toDouble())
     {
-        ui->warning->setText("");
-    } else {
         ui->warning->setText("Недостатньо грошей!");
         return;
     }
+    if ((stavka.toDouble()) <= 0)
+    {
+        ui->warning->setText("Ставка не може бути нижчою одиниці!");
+        return;
+    }else {
+        ui->warning->setText("");
+    }
 
-
+    start_stop = true;
     tmp1 = tmp2;
     int random = randomBetween(0, 14);
     tmp2 = random;
@@ -442,6 +480,7 @@ void Roulette::on_bet_on_green_clicked()
             }
         }
     }
+    start_stop = false;
 }
 
 
