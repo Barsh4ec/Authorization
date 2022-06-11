@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql network
 
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -13,6 +13,7 @@ SOURCES += \
     accountsettings.cpp \
     addmoney.cpp \
     blackjack.cpp \
+    chat.cpp \
     crash.cpp \
     db.cpp \
     hilo.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     addmoney.h \
     authorization.h \
     blackjack.h \
+    chat.h \
     crash.h \
     db.h \
     hilo.h \
@@ -45,6 +47,7 @@ FORMS += \
     addmoney.ui \
     authorization.ui \
     blackjack.ui \
+    chat.ui \
     crash.ui \
     hilo.ui \
     mainwindow.ui \

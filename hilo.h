@@ -25,6 +25,18 @@ public:
                          ":/resources/Cards/5-bubna.png", ":/resources/Cards/6-bubna.png", ":/resources/Cards/7-bubna.png",
                          ":/resources/Cards/8-bubna.png", ":/resources/Cards/9-bubna.png", ":/resources/Cards/10-bubna.png",
                          ":/resources/Cards/11-bubna.png", ":/resources/Cards/12-bubna.png", ":/resources/Cards/13-bubna.png", ":/resources/Cards/14-bubna.png"};
+    QString cherva[13] = {":/resources/Cards/2-cherva.png", ":/resources/Cards/3-cherva.png", ":/resources/Cards/4-cherva.png",
+                         ":/resources/Cards/5-cherva.png", ":/resources/Cards/6-cherva.png", ":/resources/Cards/7-cherva.png",
+                         ":/resources/Cards/8-cherva.png", ":/resources/Cards/9-cherva.png", ":/resources/Cards/10-cherva.png",
+                         ":/resources/Cards/11-cherva.png", ":/resources/Cards/12-cherva.png", ":/resources/Cards/13-cherva.png", ":/resources/Cards/14-cherva.png"};
+    QString pika[13] = {":/resources/Cards/2-pika.png", ":/resources/Cards/3-pika.png", ":/resources/Cards/4-pika.png",
+                         ":/resources/Cards/5-pika.png", ":/resources/Cards/6-pika.png", ":/resources/Cards/7-pika.png",
+                         ":/resources/Cards/8-pika.png", ":/resources/Cards/9-pika.png", ":/resources/Cards/10-pika.png",
+                         ":/resources/Cards/11-pika.png", ":/resources/Cards/12-pika.png", ":/resources/Cards/13-pika.png", ":/resources/Cards/14-pika.png"};
+    QString hresta[13] = {":/resources/Cards/2-hresta.png", ":/resources/Cards/3-hresta.png", ":/resources/Cards/4-hresta.png",
+                         ":/resources/Cards/5-hresta.png", ":/resources/Cards/6-hresta.png", ":/resources/Cards/7-hresta.png",
+                         ":/resources/Cards/8-hresta.png", ":/resources/Cards/9-hresta.png", ":/resources/Cards/10-hresta.png",
+                         ":/resources/Cards/11-hresta.png", ":/resources/Cards/12-hresta.png", ":/resources/Cards/13-hresta.png", ":/resources/Cards/14-hresta.png"};
     int ChangeTheCard();
     double MakeLowCoeficient(int);
     double MakeHighCoeficient(int);
@@ -65,6 +77,8 @@ private slots:
     void on_Take_Cash_clicked();
 
     void on_play_button_clicked();
+
+    void on_info_clicked();
 
 public slots:
     void slot(QString a);

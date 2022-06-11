@@ -148,3 +148,10 @@ void MainWindow::on_SettingsButon_clicked()
     this->close();
 }
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    chat = new Chat(this, login);
+    chat->show();
+}
+

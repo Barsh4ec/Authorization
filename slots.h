@@ -51,6 +51,7 @@ public slots:
     void RandomGenerate();
 
 private:
+    bool is_started = false;
     Ui::Slots *ui;
     db database;
 };

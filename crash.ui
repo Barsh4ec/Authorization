@@ -32,7 +32,7 @@
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background: #C5C5C5;
+    <string notr="true">background: #14C38E;
 border-radius: 20px;</string>
    </property>
    <widget class="QPushButton" name="min_value_button">
@@ -47,7 +47,7 @@ border-radius: 20px;</string>
     <property name="styleSheet">
      <string notr="true">color: black;
 border-radius: 5px;
-background: #A1A5F1;
+background: #E3FCBF;
 border-color: black;
 border-style: solid;
 border-width: 1px;</string>
@@ -68,7 +68,7 @@ border-width: 1px;</string>
     <property name="styleSheet">
      <string notr="true">color: black;
 border-radius: 5px;
-background: #A1A5F1;
+background: #E3FCBF;
 border-color: black;
 border-style: solid;
 border-width: 1px;</string>
@@ -89,7 +89,7 @@ border-width: 1px;</string>
     <property name="styleSheet">
      <string notr="true">color: black;
 border-radius: 5px;
-background: #A1A5F1;
+background: #E3FCBF;
 border-color: black;
 border-style: solid;
 border-width: 1px;</string>
@@ -110,7 +110,7 @@ border-width: 1px;</string>
     <property name="styleSheet">
      <string notr="true">color: black;
 border-radius: 5px;
-background: #A1A5F1;
+background: #E3FCBF;
 border-color: black;
 border-style: solid;
 border-width: 1px;</string>
@@ -131,7 +131,7 @@ border-width: 1px;</string>
     <property name="styleSheet">
      <string notr="true">color: black;
 border-radius: 5px;
-background: #A1A5F1;
+background: #E3FCBF;
 border-color: black;
 border-style: solid;
 border-width: 1px;</string>
@@ -175,7 +175,7 @@ border-width: 1px;</string>
     <property name="styleSheet">
      <string notr="true">color: black;
 border-radius: 5px;
-background: #A1A5F1;
+background: #E3FCBF;
 border-color: black;
 border-style: solid;
 border-width: 1px;</string>
@@ -214,7 +214,7 @@ border-width: 1px;</string>
     <property name="styleSheet">
      <string notr="true">color: black;
 border-radius: 5px;
-background: #A1A5F1;
+background: #E3FCBF;
 border-color: black;
 border-style: solid;
 border-width: 1px;</string>
@@ -258,7 +258,7 @@ border-width: 1px;</string>
     <property name="styleSheet">
      <string notr="true">color: black;
 border-radius: 5px;
-background: #A1A5F1;
+background: #E3FCBF;
 border-color: black;
 border-style: solid;
 border-width: 1px;</string>
@@ -286,7 +286,7 @@ border-width: 1px;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">border-radius: 40px;
-background: #A1A5F1;
+background: #E3FCBF;
 border-color: #696969;
 border-style: solid;
 border-width: 1px;</string>
@@ -360,7 +360,7 @@ QPushButton:hover {
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background: qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:1, stop:0 rgba(54, 126, 152, 164), stop:1 rgba(0, 70, 116, 183))</string>
+    <string notr="true">background:#14C38E;</string>
    </property>
    <widget class="QLabel" name="userbalance">
     <property name="geometry">

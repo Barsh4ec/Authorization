@@ -29,6 +29,8 @@ void Slots::on_BackToMain_clicked()
 
 void Slots::on_StartGame_clicked()
 {
+    if(is_started == true)
+        return;
     stavka = ui->summa_stavky->text();
     if ((stavka.toDouble()) <= this->money.toDouble() && stavka != "0" )
     {
@@ -37,14 +39,15 @@ void Slots::on_StartGame_clicked()
         ui->warning->setText("Недостатньо грошей!");
         return;
     }
+    is_started = true;
     QString WinMoney;
     ui->Win->setText("");
     ui->label_1->setStyleSheet("background-image:");
     ui->label_2->setStyleSheet("background-image:");
     ui->label_3->setStyleSheet("background-image:");
     int Picture1 = RandomPicture1();
-    int Picture2 =RandomPicture2();
-    int Picture3 =RandomPicture3();
+    int Picture2 = RandomPicture2();
+    int Picture3 = RandomPicture3();
     if((Picture1 == Picture2 && Picture1 != Picture3)
             || (Picture1 == Picture3 && Picture1 != Picture2)
             || (Picture2 == Picture3 && Picture2 != Picture1))
@@ -66,6 +69,7 @@ void Slots::on_StartGame_clicked()
             QMessageBox msgBox;
             msgBox.setText("гроші успішно змінено!");
         }
+        is_started = false;
         return;
     }else if((Picture1 == Picture2) && (Picture1 == Picture3) )
     {
@@ -87,6 +91,7 @@ void Slots::on_StartGame_clicked()
             QMessageBox msgBox;
             msgBox.setText("гроші успішно змінено!");
         }
+        is_started = false;
         return;
     } else {
         money = QString::number(money.toDouble() - stavka.toDouble());
@@ -105,6 +110,7 @@ void Slots::on_StartGame_clicked()
             QMessageBox msgBox;
             msgBox.setText("гроші успішно змінено!");
         }
+        is_started = false;
     return;
     }
 }

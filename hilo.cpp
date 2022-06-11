@@ -1,5 +1,6 @@
 #include "hilo.h"
 #include "ui_hilo.h"
+#include <QMessageBox>
 
 HiLo::HiLo(QWidget *parent) :
     QWidget(parent),
@@ -12,7 +13,6 @@ HiLo::HiLo(QWidget *parent) :
     is_plus = true;
     ui->coeficient_label->setText(Total_coeficient);
     ui->count_of_cards_label->setText(cards_in_row);
-    ui->userbalance->setStyleSheet("color: #696969; background-color: C5C5C5; border-radius: 5px;");
 
 }
 
@@ -39,7 +39,23 @@ int HiLo::ChangeTheCard()
     {
         index = randomBetween(0, 12);
     }
-    ui->Current_card->setStyleSheet("background: url("+bubna[index]+");");
+    int type_of_card = randomBetween(1, 4);
+    switch(type_of_card)
+    {
+    case(1):
+        ui->Current_card->setStyleSheet("background: url("+bubna[index]+");");
+        break;
+    case(2):
+        ui->Current_card->setStyleSheet("background: url("+cherva[index]+");");
+        break;
+    case(3):
+        ui->Current_card->setStyleSheet("background: url("+pika[index]+");");
+        break;
+    case(4):
+        ui->Current_card->setStyleSheet("background: url("+hresta[index]+");");
+        break;
+    }
+
     high_coeficient = MakeHighCoeficient(index);
     QString str_hcoef = QString::number(high_coeficient);
     ui->Higher_card_Button->setText(""+str_hcoef+"X");
@@ -142,6 +158,8 @@ void HiLo::on_Lower_Card_Button_clicked()
 
 void HiLo::on_minus_button_clicked()
 {
+    if(is_started == true)
+        return;
     ui->minus_button->lower();
     ui->plus_button->raise();
     is_plus = false;
@@ -150,6 +168,8 @@ void HiLo::on_minus_button_clicked()
 
 void HiLo::on_plus_button_clicked()
 {
+    if(is_started == true)
+        return;
     ui->plus_button->lower();
     ui->minus_button->raise();
     is_plus = true;
@@ -158,6 +178,8 @@ void HiLo::on_plus_button_clicked()
 
 void HiLo::on__0_1_Button_clicked()
 {
+    if(is_started == true)
+        return;
     if(is_plus == true)
     {
         if (stavka.toDouble() <= this->money.toDouble() - 0.1)
@@ -177,6 +199,8 @@ void HiLo::on__0_1_Button_clicked()
 
 void HiLo::on__0_5_Button_clicked()
 {
+    if(is_started == true)
+        return;
     if(is_plus == true)
     {
         if (stavka.toDouble() <= this->money.toDouble() - 0.5)
@@ -196,6 +220,8 @@ void HiLo::on__0_5_Button_clicked()
 
 void HiLo::on__1_Button_clicked()
 {
+    if(is_started == true)
+        return;
     if(is_plus == true)
     {
         if (stavka.toDouble() <= this->money.toDouble() - 1)
@@ -215,6 +241,8 @@ void HiLo::on__1_Button_clicked()
 
 void HiLo::on__5_Button_clicked()
 {
+    if(is_started == true)
+        return;
     if(is_plus == true)
     {
         if (stavka.toDouble() <= this->money.toDouble() - 5)
@@ -234,6 +262,8 @@ void HiLo::on__5_Button_clicked()
 
 void HiLo::on__20_Button_clicked()
 {
+    if(is_started == true)
+        return;
     if(is_plus == true)
     {
         if (stavka.toDouble() <= this->money.toDouble() - 20)
@@ -253,6 +283,8 @@ void HiLo::on__20_Button_clicked()
 
 void HiLo::on__100_Button_clicked()
 {
+    if(is_started == true)
+        return;
     if(is_plus == true)
     {
         if (stavka.toDouble() <= this->money.toDouble() - 100)
@@ -272,6 +304,8 @@ void HiLo::on__100_Button_clicked()
 
 void HiLo::on__500_Button_clicked()
 {
+    if(is_started == true)
+        return;
     if(is_plus == true)
     {
         if (stavka.toDouble() <= this->money.toDouble() - 500)
@@ -291,6 +325,8 @@ void HiLo::on__500_Button_clicked()
 
 void HiLo::on_X2_Button_clicked()
 {
+    if(is_started == true)
+        return;
     if ((stavka.toDouble() * 2.0) <= this->money.toDouble())
     {
         stavka = QString::number(stavka.toDouble() * 2.0);
@@ -301,6 +337,8 @@ void HiLo::on_X2_Button_clicked()
 
 void HiLo::on_half_button_clicked()
 {
+    if(is_started == true)
+        return;
     if (stavka.toDouble() >= 2)
     {
         stavka = QString::number(stavka.toDouble() / 2.0);
@@ -431,6 +469,7 @@ void HiLo::on_Take_Cash_clicked()
     Total_coeficient = QString::number(1.0);
     ui->coeficient_label->setText(Total_coeficient);
     ui->count_of_cards_label->setText(cards_in_row);
+    ChangeTheCard();
 
     ui->play_button->raise();
     ui->Lower_Card_Button->lower();
@@ -444,7 +483,7 @@ void HiLo::on_Take_Cash_clicked()
 
 void HiLo::on_play_button_clicked()
 {
-    if(stavka.toDouble() < 1)
+    if(stavka.toDouble() < 1 || stavka.toDouble() > money.toDouble())
         return;
     is_started = true;
 
@@ -460,12 +499,18 @@ void HiLo::on_play_button_clicked()
         QString s = "UPDATE caligula_users.Users SET balance= " +money+ " WHERE login = " +login+ ";";
         QSqlQuery query = database.query_func(s);
     }
-
+    ui->userbalance->setText(money);
     ui->play_button->lower();
     ui->Lower_Card_Button->raise();
     ui->Higher_card_Button->raise();
     ui->label->raise();
     ui->Take_Cash->raise();
 
+}
+
+
+void HiLo::on_info_clicked()
+{
+    QMessageBox::about(this, "Інформація", "HiLo - це різновид карткових азартних ігор, в якій для виграшу вам необхідно вгадати, чи буде наступна карта молодша або старша, ніж карта, яку гравець бачить перед собою. У грі використовується стандартна колода із п'ятдесяти двох карт. Колода карток тасується перед кожною роздачею.");
 }
 

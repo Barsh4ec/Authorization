@@ -14,6 +14,7 @@
 #include <addmoney.h>
 #include <accountsettings.h>
 #include <settings.h>
+#include "chat.h"
 
 
 namespace Ui {
@@ -49,6 +50,8 @@ private slots:
 
     void on_SettingsButon_clicked();
 
+    void on_pushButton_clicked();
+
 signals:
     void roulettesignal(QString, QString);
     void slotssignal(QString, QString);
@@ -71,6 +74,7 @@ private:
     AddMoney *addmoney;
     AccountSettings *accsett;
     Settings *settings;
+    Chat *chat;
 };
 
 #endif // MAINWINDOW_H
