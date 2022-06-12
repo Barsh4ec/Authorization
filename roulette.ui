@@ -229,7 +229,7 @@ QPushButton:hover {
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true"> background: #14C38E;
+      <string notr="true">background: #92BA92;
 border-radius: 20px;</string>
      </property>
      <widget class="QPushButton" name="min_value_button">
@@ -455,7 +455,9 @@ border-radius: 15px;</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">background: #14C38E</string>
+      <string notr="true">background: #92BA92;
+border-radius: 10px;
+</string>
      </property>
      <widget class="QPushButton" name="BackToMain">
       <property name="geometry">

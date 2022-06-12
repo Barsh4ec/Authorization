@@ -1,14 +1,15 @@
 #include "blackjack.h"
 #include "ui_blackjack.h"
 #include <QTimer>
+#include <QMessageBox>
 
 BlackJack::BlackJack(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::BlackJack)
 {
     ui->setupUi(this);
-    setWindowTitle("BlackJack");
-    this->resize(1040, 700);
+    setWindowTitle(QObject::tr("BlackJack"));
+    this->resize(1000, 700);
     ui->Add->lower();
     ui->Stay->lower();
 }
@@ -24,22 +25,93 @@ static int randomBetween(int low, int high)
 int BlackJack::ChangeDealerCard()
 {
     int index = randomBetween(0, 12);
+    int type_of_card = randomBetween(1, 4);
     switch(dealer_step)
     {
     case(0):
-        ui->Dealer_Card_Label1->setStyleSheet("background: url("+dealer_bubna[index]+")");
+        switch(type_of_card)
+        {
+        case(1):
+            ui->Dealer_Card_Label1->setStyleSheet("background: url("+dealer_bubna[index]+");");
+            break;
+        case(2):
+            ui->Dealer_Card_Label1->setStyleSheet("background: url("+dealer_cherva[index]+");");
+            break;
+        case(3):
+            ui->Dealer_Card_Label1->setStyleSheet("background: url("+dealer_pika[index]+");");
+            break;
+        case(4):
+            ui->Dealer_Card_Label1->setStyleSheet("background: url("+dealer_hresta[index]+");");
+            break;
+        }
         break;
     case(1):
-        ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_bubna[index]+")");
+        switch(type_of_card)
+        {
+        case(1):
+            ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_bubna[index]+");");
+            break;
+        case(2):
+            ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_cherva[index]+");");
+            break;
+        case(3):
+            ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_pika[index]+");");
+            break;
+        case(4):
+            ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_hresta[index]+");");
+            break;
+        }
         break;
     case(2):
-        ui->Dealer_Card_Label3->setStyleSheet("background: url("+dealer_bubna[index]+")");
+        switch(type_of_card)
+        {
+        case(1):
+            ui->Dealer_Card_Label3->setStyleSheet("background: url("+dealer_bubna[index]+");");
+            break;
+        case(2):
+            ui->Dealer_Card_Label3->setStyleSheet("background: url("+dealer_cherva[index]+");");
+            break;
+        case(3):
+            ui->Dealer_Card_Label3->setStyleSheet("background: url("+dealer_pika[index]+");");
+            break;
+        case(4):
+            ui->Dealer_Card_Label3->setStyleSheet("background: url("+dealer_hresta[index]+");");
+            break;
+        }
         break;
     case(3):
-        ui->Dealer_Card_Label4->setStyleSheet("background: url("+dealer_bubna[index]+")");
+        switch(type_of_card)
+        {
+        case(1):
+            ui->Dealer_Card_Label4->setStyleSheet("background: url("+dealer_bubna[index]+");");
+            break;
+        case(2):
+            ui->Dealer_Card_Label4->setStyleSheet("background: url("+dealer_cherva[index]+");");
+            break;
+        case(3):
+            ui->Dealer_Card_Label4->setStyleSheet("background: url("+dealer_pika[index]+");");
+            break;
+        case(4):
+            ui->Dealer_Card_Label4->setStyleSheet("background: url("+dealer_hresta[index]+");");
+            break;
+        }
         break;
     case(4):
-        ui->Dealer_Card_Label5->setStyleSheet("background: url("+dealer_bubna[index]+")");
+        switch(type_of_card)
+        {
+        case(1):
+            ui->Dealer_Card_Label5->setStyleSheet("background: url("+dealer_bubna[index]+");");
+            break;
+        case(2):
+            ui->Dealer_Card_Label5->setStyleSheet("background: url("+dealer_cherva[index]+");");
+            break;
+        case(3):
+            ui->Dealer_Card_Label5->setStyleSheet("background: url("+dealer_pika[index]+");");
+            break;
+        case(4):
+            ui->Dealer_Card_Label5->setStyleSheet("background: url("+dealer_hresta[index]+");");
+            break;
+        }
     }
 
     return index;
@@ -48,22 +120,94 @@ int BlackJack::ChangeDealerCard()
 int BlackJack::ChangePlayerCard()
 {
     int index = randomBetween(0, 12);
+    int type_of_card = randomBetween(1, 4);
     switch(player_step)
     {
     case(0):
-        ui->First_Card_Label->setStyleSheet("background: url("+bubna[index]+")");
+        switch(type_of_card)
+        {
+        case(1):
+            ui->First_Card_Label->setStyleSheet("background: url("+bubna[index]+");");
+            break;
+        case(2):
+            ui->First_Card_Label->setStyleSheet("background: url("+cherva[index]+");");
+            break;
+        case(3):
+            ui->First_Card_Label->setStyleSheet("background: url("+pika[index]+");");
+            break;
+        case(4):
+            ui->First_Card_Label->setStyleSheet("background: url("+hresta[index]+");");
+            break;
+        }
         break;
     case(1):
-        ui->Second_Card_Label->setStyleSheet("background: url("+bubna[index]+")");
+        switch(type_of_card)
+        {
+        case(1):
+            ui->Second_Card_Label->setStyleSheet("background: url("+bubna[index]+");");
+            break;
+        case(2):
+            ui->Second_Card_Label->setStyleSheet("background: url("+cherva[index]+");");
+            break;
+        case(3):
+            ui->Second_Card_Label->setStyleSheet("background: url("+pika[index]+");");
+            break;
+        case(4):
+            ui->Second_Card_Label->setStyleSheet("background: url("+hresta[index]+");");
+            break;
+        }
         break;
     case(2):
-        ui->Third_Card_Label->setStyleSheet("background: url("+bubna[index]+")");
+        switch(type_of_card)
+        {
+        case(1):
+            ui->Third_Card_Label->setStyleSheet("background: url("+bubna[index]+");");
+            break;
+        case(2):
+            ui->Third_Card_Label->setStyleSheet("background: url("+cherva[index]+");");
+            break;
+        case(3):
+            ui->Third_Card_Label->setStyleSheet("background: url("+pika[index]+");");
+            break;
+        case(4):
+            ui->Third_Card_Label->setStyleSheet("background: url("+hresta[index]+");");
+            break;
+        }
         break;
     case(3):
-        ui->Fourth_Card_Label->setStyleSheet("background: url("+bubna[index]+")");
+        switch(type_of_card)
+        {
+        case(1):
+            ui->Fourth_Card_Label->setStyleSheet("background: url("+bubna[index]+");");
+            break;
+        case(2):
+            ui->Fourth_Card_Label->setStyleSheet("background: url("+cherva[index]+");");
+            break;
+        case(3):
+            ui->Fourth_Card_Label->setStyleSheet("background: url("+pika[index]+");");
+            break;
+        case(4):
+            ui->Fourth_Card_Label->setStyleSheet("background: url("+hresta[index]+");");
+            break;
+        }
         break;
     case(4):
-        ui->Fiveth_Card_Label->setStyleSheet("background: url("+bubna[index]+")");
+        switch(type_of_card)
+        {
+        case(1):
+            ui->Fiveth_Card_Label->setStyleSheet("background: url("+bubna[index]+");");
+            break;
+        case(2):
+            ui->Fiveth_Card_Label->setStyleSheet("background: url("+cherva[index]+");");
+            break;
+        case(3):
+            ui->Fiveth_Card_Label->setStyleSheet("background: url("+pika[index]+");");
+            break;
+        case(4):
+            ui->Fiveth_Card_Label->setStyleSheet("background: url("+hresta[index]+");");
+            break;
+        }
+        break;
     }
     return index;
 }
@@ -104,6 +248,15 @@ void BlackJack::slot(QString a)
 
 void BlackJack::on_StartGame_clicked()
 {
+    stavka = ui->summa_stavky->text();
+    if ((stavka.toDouble()) > this->money.toDouble())
+    {
+        return;
+    }
+    if ((stavka.toDouble()) <= 0)
+    {
+        return;
+    }
     ui->Result_label->setText("");
     is_started = true;
     ui->StartGame->lower();
@@ -145,30 +298,53 @@ void BlackJack::on_Stay_clicked()
     if(is_started == true)
         return;
     is_started = true;
+    int tmp_score = 0;
     if(player_score.toInt() > 21)
     {
         ui->Result_label->setText("Dealer Wins!");
         Stop_Game();
+        TakeMoney();
         return;
     }
     if(dealer_score.toInt() < 19)
     {
         if(Dealer_stop == false)
         {
-            int tmp_score = Make_score(dealer_card);
-            dealer_score = QString::number(tmp_score + dealer_score.toInt());
-            ui->dealer_score_label->setText(dealer_score);
-            ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_bubna[dealer_card]+")");
-            Timer(1000);
+            if(dealer_step == 2)
+            {
+                tmp_score = Make_score(dealer_card);
+                dealer_score = QString::number(tmp_score + dealer_score.toInt());
+                ui->dealer_score_label->setText(dealer_score);
+                dealer_step++;
+                int type_of_card = randomBetween(1, 4);
+                switch(type_of_card)
+                {
+                case(1):
+                    ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_bubna[dealer_card]+");");
+                    break;
+                case(2):
+                    ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_cherva[dealer_card]+");");
+                    break;
+                case(3):
+                    ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_pika[dealer_card]+");");
+                    break;
+                case(4):
+                    ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_hresta[dealer_card]+");");
+                    break;
+                }
+                Timer(1000);
+            }
+
             if(dealer_score.toInt() < 16)
             {
                 dealer_card = ChangeDealerCard();
                 tmp_score = Make_score(dealer_card);
                 dealer_score = QString::number(dealer_score.toInt() + tmp_score);
+                dealer_step++;
                 ui->dealer_score_label->setText(dealer_score);
                 Timer(1000);
             }
-            if(dealer_score.toInt() >= 16 && dealer_score.toInt() < 18)
+            if(dealer_score.toInt() >= 18 && dealer_score.toInt() < 19)
             {
                 int rand = randomBetween(0,100);
                 if(rand %2 == 1)
@@ -181,46 +357,123 @@ void BlackJack::on_Stay_clicked()
                 }
                 Dealer_stop = true;
             }
+            if(dealer_score.toInt() == 21)
+            {
+                ui->Result_label->setText("Dealer Wins!");
+                Stop_Game();
+                TakeMoney();
+                return;
+            }
         }
     }
 
-    if(player_score.toInt() < 20 && dealer_score.toInt() >= 20)
+    if(dealer_score.toInt() >= 19 && player_score.toInt() < 19)
     {
         ui->Result_label->setText("Dealer Wins!");
         Stop_Game();
+        TakeMoney();
         return;
     }
-    if(player_score.toInt() > 21 && dealer_score.toInt() <= 21)
+    if(dealer_score.toInt() > 21 && player_score.toInt() < 21)
+    {
+        ui->Result_label->setText("Player Wins!");
+        Stop_Game();
+        AddMoney();
+        return;
+    }
+    if(dealer_score.toInt() < 18)
+    {
+        dealer_card = ChangeDealerCard();
+        tmp_score = Make_score(dealer_card);
+        dealer_score = QString::number(dealer_score.toInt() + tmp_score);
+        ui->dealer_score_label->setText(dealer_score);
+        dealer_step++;
+        Timer(1000);
+    }
+    if(player_score.toInt() < 21 && dealer_score.toInt() == 21)
     {
         ui->Result_label->setText("Dealer Wins!");
         Stop_Game();
+        TakeMoney();
         return;
     }
-    if(player_score.toInt() >= 20 && dealer_score.toInt() < 20)
+    if(dealer_score.toInt() == 19 && player_score.toInt() == 18)
+    {
+        ui->Result_label->setText("Dealer Wins!");
+        Stop_Game();
+        TakeMoney();
+        return;
+    }
+    if(dealer_score.toInt() == 19 && player_score.toInt() == 20)
     {
         ui->Result_label->setText("Player Wins!");
         Stop_Game();
+        AddMoney();
         return;
     }
-    if(player_score.toInt() <= 21 && dealer_score.toInt() > 21)
+    if(player_score.toInt() > 21 && dealer_score.toInt() == 21)
+    {
+        ui->Result_label->setText("Dealer Wins!");
+        Stop_Game();
+        TakeMoney();
+        return;
+    }
+    if(player_score.toInt() == 21 && dealer_score.toInt() < 21)
     {
         ui->Result_label->setText("Player Wins!");
         Stop_Game();
-        return;
-    }
-    if(dealer_score.toInt() == player_score.toInt())
-    {
-        ui->Result_label->setText("Draw!");
-        Stop_Game();
+        AddMoney();
         return;
     }
     if(player_score.toInt() > 21 && dealer_score.toInt() > 21)
     {
+        ui->Result_label->setText("Player Wins!");
+        Stop_Game();
+        AddMoney();
+        return;
+    }
+    if(player_score.toInt() == 21 && dealer_score.toInt() > 21)
+    {
+        ui->Result_label->setText("Player Wins!");
+        Stop_Game();
+        AddMoney();
+        return;
+    }
+    if(player_score.toInt() == dealer_score.toInt())
+    {
         ui->Result_label->setText("Draw!");
         Stop_Game();
         return;
     }
+    if(player_score.toInt() > 21 && dealer_score.toInt() < 21)
+    {
+        ui->Result_label->setText("Dealer Wins!");
+        Stop_Game();
+        TakeMoney();
+        return;
+    }
+    if(player_score.toInt() < 21 && dealer_score.toInt() > 21)
+    {
+        ui->Result_label->setText("Player Wins!");
+        Stop_Game();
+        AddMoney();
+        return;
+    }
+    if(player_score.toInt() == 19 && dealer_score.toInt() == 20)
+    {
+        ui->Result_label->setText("Dealer Wins!");
+        Stop_Game();
+        TakeMoney();
+        return;
+    }
     is_started = false;
+    if(dealer_score.toInt() > 21)
+    {
+        ui->Result_label->setText("Player Wins!");
+        Stop_Game();
+        AddMoney();
+        return;
+    }
 }
 
 
@@ -244,7 +497,22 @@ void BlackJack::on_Add_clicked()
             tmp_score = Make_score(dealer_card);
             dealer_score = QString::number(tmp_score + dealer_score.toInt());
             ui->dealer_score_label->setText(dealer_score);
-            ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_bubna[dealer_card]+")");
+            int type_of_card = randomBetween(1, 4);
+            switch(type_of_card)
+            {
+            case(1):
+                ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_bubna[dealer_card]+");");
+                break;
+            case(2):
+                ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_cherva[dealer_card]+");");
+                break;
+            case(3):
+                ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_pika[dealer_card]+");");
+                break;
+            case(4):
+                ui->Dealer_Card_Label2->setStyleSheet("background: url("+dealer_hresta[dealer_card]+");");
+                break;
+            }
             Timer(1000);
         }
 
@@ -271,10 +539,18 @@ void BlackJack::on_Add_clicked()
             }
             Dealer_stop = true;
         }
+        if(dealer_score.toInt() == 21)
+        {
+            ui->Result_label->setText("Dealer Wins!");
+            Stop_Game();
+            TakeMoney();
+            return;
+        }
         if(dealer_score.toInt() > 21 && player_score.toInt() < 21)
         {
             ui->Result_label->setText("Player Wins!");
             Stop_Game();
+            AddMoney();
             return;
         }
     }
@@ -287,7 +563,7 @@ void BlackJack::on_Add_clicked()
     }
     if(player_score.toInt() >= 19)
     {
-        if(dealer_score.toInt() < 19)
+        if(dealer_score.toInt() < 18)
         {
             dealer_card = ChangeDealerCard();
             tmp_score = Make_score(dealer_card);
@@ -300,23 +576,40 @@ void BlackJack::on_Add_clicked()
         {
             ui->Result_label->setText("Dealer Wins!");
             Stop_Game();
+            TakeMoney();
             return;
         }
         if(player_score.toInt() > 21 && dealer_score.toInt() == 21)
         {
             ui->Result_label->setText("Dealer Wins!");
             Stop_Game();
+            TakeMoney();
             return;
         }
         if(player_score.toInt() == 21 && dealer_score.toInt() < 21)
         {
             ui->Result_label->setText("Player Wins!");
             Stop_Game();
+            AddMoney();
+            return;
+        }
+        if(player_score.toInt() == 20 && dealer_score.toInt() == 19)
+        {
+            ui->Result_label->setText("Player Wins!");
+            Stop_Game();
+            AddMoney();
+            return;
+        }
+        if(player_score.toInt() == 19 && dealer_score.toInt() == 20)
+        {
+            ui->Result_label->setText("Dealer Wins!");
+            Stop_Game();
+            TakeMoney();
             return;
         }
         if(player_score.toInt() > 21 && dealer_score.toInt() > 21)
         {
-            ui->Result_label->setText("Player Wins!");
+            ui->Result_label->setText("Draw!");
             Stop_Game();
             return;
         }
@@ -324,6 +617,7 @@ void BlackJack::on_Add_clicked()
         {
             ui->Result_label->setText("Player Wins!");
             Stop_Game();
+            AddMoney();
             return;
         }
         if(player_score.toInt() == dealer_score.toInt())
@@ -336,12 +630,14 @@ void BlackJack::on_Add_clicked()
         {
             ui->Result_label->setText("Dealer Wins!");
             Stop_Game();
+            TakeMoney();
             return;
         }
         if(player_score.toInt() < 21 && dealer_score.toInt() > 21)
         {
             ui->Result_label->setText("Player Wins!");
             Stop_Game();
+            AddMoney();
             return;
         }
     }
@@ -349,6 +645,7 @@ void BlackJack::on_Add_clicked()
     {
         ui->Result_label->setText("Player Wins!");
         Stop_Game();
+        AddMoney();
         return;
     }
     is_started = false;
@@ -439,3 +736,43 @@ void BlackJack::Timer(int a)
     t.start(a); // 5s timeout
     q.exec();
 }
+
+void BlackJack::AddMoney()
+{
+    money = QString::number(money.toDouble() + stavka.toDouble());
+
+    int result = 1;
+    QString s = "SELECT login AND balance from caligula_users.Users;";
+    QSqlQuery query = database.query_func(s);
+    while(query.next()){
+    }
+    if(result == 1){
+
+        QString s = "UPDATE caligula_users.Users SET balance= " +money+ " WHERE login = " +login+ ";";
+        QSqlQuery query = database.query_func(s);
+    }
+    ui->userbalance->setText(money);
+}
+
+void BlackJack::TakeMoney()
+{
+    money = QString::number(money.toDouble() - stavka.toDouble());
+
+    int result = 1;
+    QString s = "SELECT login AND balance from caligula_users.Users;";
+    QSqlQuery query = database.query_func(s);
+    while(query.next()){
+    }
+    if(result == 1){
+
+        QString s = "UPDATE caligula_users.Users SET balance= " +money+ " WHERE login = " +login+ ";";
+        QSqlQuery query = database.query_func(s);
+    }
+    ui->userbalance->setText(money);
+}
+
+void BlackJack::on_info_clicked()
+{
+    QMessageBox::about(this, "Інформація", "Бле́кджек — популярна азартна карткова гра. Black Jack належить до банкових ігор, тобто до таких, де гравці б'ються не між собою — кожен з них грає проти банку. Блекджек — одна з небагатьох ігор в казино, де результат гри залежить не тільки від випадку, але й від здібностей і вміння гравця.");
+}
+

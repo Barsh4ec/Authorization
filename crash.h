@@ -25,13 +25,13 @@ public:
     QString coeficient = "1";
     QString plus = "1";
     QString money;
+    double Generate_Coeficient();
+    void Timer(int);
 
 signals:
     void crashWindow();
 
 private slots:
-    void TimerSlot();
-
     void on_BackToMain_clicked();
 
     void on_min_value_button_clicked();
@@ -52,14 +52,14 @@ private slots:
 
     void on_Play_button_clicked();
 
+    void on_info_clicked();
+
 public slots:
     void slot(QString a, QString b);
 
 private:
     db database;
     Ui::Crash *ui;
-    QTimer *timer;
-    int time;
 };
 
 #endif // CRASH_H

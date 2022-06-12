@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent, QString login, QString password) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowTitle("Caligula's Palace");
+    setWindowTitle(QObject::tr("Caligula's Palace"));
     this->resize(1040, 800);
     this->login = login;
     this->password = password;
@@ -66,6 +66,7 @@ MainWindow::MainWindow(QWidget *parent, QString login, QString password) :
 
             if(usernameFromDB == login && passwordFromDB == password) {
                 ui->userbalance->setText(balanceFromDB);
+
 
             }
         }
@@ -153,5 +154,30 @@ void MainWindow::on_pushButton_clicked()
 {
     chat = new Chat(this, login);
     chat->show();
+}
+
+
+void MainWindow::on_refresh_clicked()
+{
+    QString balance;
+
+    QSqlQuery query(QSqlDatabase::database("MyConnect"));
+    query.prepare(QString("SELECT * FROM Users WHERE login = :login"));
+
+    query.bindValue(":balance", balance);
+    query.bindValue(":login", login);
+
+    if(!query.exec()){
+        qDebug() << "balance_failed";
+    } else {
+        while(query.next()) {
+            QString balanceFromDB = query.value(4).toString();
+            QString usernameFromDB = query.value(1).toString();
+
+            if(usernameFromDB == login) {
+                ui->userbalance->setText(balanceFromDB);
+            }
+        }
+    }
 }
 

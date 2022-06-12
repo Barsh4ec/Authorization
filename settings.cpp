@@ -29,7 +29,6 @@ void Settings::on_BackToMain_clicked()
 void Settings::slot(QString a)
 {
     login = a;
-    qDebug() << login;
 }
 
 void Settings::Write(QString path, QByteArray a)

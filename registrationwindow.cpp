@@ -10,12 +10,12 @@ RegistrationWindow::RegistrationWindow(QWidget *parent) :
     ui(new Ui::RegistrationWindow)
 {
     ui->setupUi(this);
-    setWindowTitle("Реєстрація");
+    setWindowTitle(QObject::tr("Реєстрація"));
 
-    ui-> RegLogin-> setPlaceholderText ("Введіть логін");
-    ui-> Email-> setPlaceholderText ("Введіть пошту");
-    ui-> RegPass-> setPlaceholderText ("Введіть пароль");
-    ui-> RegPass1-> setPlaceholderText ("Повторіть пароль");
+    ui-> RegLogin-> setPlaceholderText (QObject::tr("Введіть логін"));
+    ui-> Email-> setPlaceholderText(QObject::tr("Введіть пошту"));
+    ui-> RegPass-> setPlaceholderText (QObject::tr("Введіть пароль"));
+    ui-> RegPass1-> setPlaceholderText (QObject::tr("Повторіть пароль"));
     ui-> RegPass-> setEchoMode (QLineEdit :: Password);
     ui-> RegPass1-> setEchoMode (QLineEdit :: Password);
 

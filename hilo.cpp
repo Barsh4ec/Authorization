@@ -7,7 +7,7 @@ HiLo::HiLo(QWidget *parent) :
     ui(new Ui::HiLo)
 {
     ui->setupUi(this);
-    setWindowTitle("HiLo");
+    setWindowTitle(QObject::tr("HiLo"));
     this->resize(1150, 700);
     ChangeTheCard();
     is_plus = true;
@@ -507,7 +507,6 @@ void HiLo::on_play_button_clicked()
     ui->Take_Cash->raise();
 
 }
-
 
 void HiLo::on_info_clicked()
 {

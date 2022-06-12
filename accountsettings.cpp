@@ -8,13 +8,15 @@ AccountSettings::AccountSettings(QWidget *parent) :
 {
     ui->setupUi(this);
     database.db_connect();
+    ui->change_email->setPlaceholderText(QObject::tr("Введіть нову пошту"));
+    ui->change_name->setPlaceholderText(QObject::tr("Введіть новий логін"));
+    ui->change_pas->setPlaceholderText(QObject::tr("Введіть новий пароль"));
 
 }
 
 void AccountSettings::slot(QString a)
 {
     login = a;
-    qDebug() << login;
     QString s = "SELECT id from caligula_users.Users WHERE login="+login+";";
     QSqlQuery query = database.query_func(s);
     query.first();
@@ -27,10 +29,6 @@ AccountSettings::~AccountSettings()
 {
     delete ui;
 }
-
-
-
-
 
 void AccountSettings::on_BackToMain_clicked()
 {

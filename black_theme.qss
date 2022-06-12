@@ -340,8 +340,8 @@ QComboBox
     background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(84, 84, 84, 255),stop:1 rgba(59, 59, 59, 255));
     border: 1px solid #000;
     padding-left: 6px;
+    border-radius: 5px;
     color: #ffffff;
-    height: 20px;
 
 }
 
@@ -367,6 +367,7 @@ QComboBox QAbstractItemView
 {
     background-color: #383838;
     color: #ffffff;
+    border-radius: 5px;
     border: 1px solid black;
     selection-background-color: #b78620;
     outline: 0;

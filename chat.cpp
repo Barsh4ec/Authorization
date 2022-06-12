@@ -12,7 +12,7 @@ Chat::Chat(QWidget *parent, QString login) :
       connect(socket, &QTcpSocket::readyRead, this, &Chat::slotReadyRead);
       connect(socket, &QTcpSocket::disconnected, socket, &QTcpSocket::deleteLater);
       nextBlockSize = 0;
-      this->setWindowTitle("Чат");
+      this->setWindowTitle(QObject::tr("Чат"));
   }
 
   Chat::~Chat()

@@ -28,6 +28,8 @@ public:
     int dealer_step = 0;
     void Stop_Game();
     void Timer(int);
+    void AddMoney();
+    void TakeMoney();
 
 signals:
     void bjWindow();
@@ -40,6 +42,8 @@ private slots:
     void on_Stay_clicked();
 
     void on_Add_clicked();
+
+    void on_info_clicked();
 
 public slots:
     void slot(QString a);
@@ -79,6 +83,7 @@ private:
                          ":/resources/Much_Smaller_Cards/8-hresta.png", ":/resources/Much_Smaller_Cards/9-hresta.png", ":/resources/Much_Smaller_Cards/10-hresta.png",
                          ":/resources/Much_Smaller_Cards/11-hresta.png", ":/resources/Much_Smaller_Cards/12-hresta.png", ":/resources/Much_Smaller_Cards/13-hresta.png", ":/resources/Much_Smaller_Cards/14-hresta.png"};
     Ui::BlackJack *ui;
+    QString stavka;
     QString money;
     QString player_score = "0";
     QString dealer_score = "0";

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1040</width>
-    <height>733</height>
+    <width>1065</width>
+    <height>764</height>
    </rect>
   </property>
   <property name="font">
@@ -31,7 +31,8 @@
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background: #92BA92;</string>
+         <string notr="true">background: #92BA92;
+border-radius: 10px;</string>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
@@ -52,6 +53,36 @@
             </size>
            </property>
           </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="refresh">
+           <property name="minimumSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>32</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background: transparent;
+	background-image: url(:/resources/png/refresh.png);
+}
+
+QPushButton:hover {
+	background: transparent;
+	background-image: url(:/resources/png/refresh_color.png);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="userbalance">
@@ -188,7 +219,7 @@ QPushButton:hover {
          </size>
         </property>
         <property name="text">
-         <string>Chat</string>
+         <string>Чат</string>
         </property>
        </widget>
       </item>
@@ -266,7 +297,7 @@ QPushButton:hover {
     border-style: solid;
     border-width: 3px;
     border-radius:15;
-    border-color: black;
+    border-color: #505050;
 }
 
 QPushButton:hover {
@@ -329,7 +360,7 @@ QPushButton:hover {
  	border-style: solid;
     border-width: 3px;
     border-radius:15;
-    border-color: black;
+    border-color: #505050;
 }
 
 QPushButton:hover {
@@ -392,7 +423,7 @@ QPushButton:hover {
  	border-style: solid;
     border-width: 3px;
     border-radius:15;
-    border-color: black;
+    border-color: #505050;
 }
 
 QPushButton:hover {
@@ -493,11 +524,11 @@ QPushButton:hover {
           <property name="styleSheet">
            <string notr="true">QPushButton{
 	background: transparent;
-	background-image: url(:/resources/png/Hi-Lo.png);
+	background-image: url(:/resources/png/HiLo (norm_colored).png);
 	 border-style: solid;
     border-width: 3px;
     border-radius:15;
-    border-color: black;
+    border-color: #505050;
 }
 
 QPushButton:hover {
@@ -556,11 +587,11 @@ QPushButton:hover {
           <property name="styleSheet">
            <string notr="true">QPushButton{
 	background: transparent;
-	background-image: url(:/resources/png/Crash.png);
+	background-image: url(:/resources/png/Crash(norm).png);
  	border-style: solid;
     border-width: 3px;
     border-radius:15;
-    border-color: black;
+    border-color: #505050;
 }
 
 QPushButton:hover {
@@ -623,7 +654,7 @@ QPushButton:hover {
  	border-style: solid;
     border-width: 3px;
     border-radius:15;
-    border-color: black;
+    border-color: #505050;
 }
 
 QPushButton:hover {

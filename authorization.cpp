@@ -10,12 +10,12 @@ Authorization::Authorization(QWidget *parent)
     , ui(new Ui::Authorization)
 {
     ui->setupUi(this);
-    setWindowTitle("Авторизація");
+    setWindowTitle(QObject::tr("Авторизація"));
 
     sWindow = new RegistrationWindow();
     connect(sWindow, &RegistrationWindow::firstWindow, this, &Authorization::show);
-    ui-> Login-> setPlaceholderText ("Введіть логін");
-    ui-> password-> setPlaceholderText ("Введіть пароль");
+    ui-> Login-> setPlaceholderText (QObject::tr("Введіть логін"));
+    ui-> password-> setPlaceholderText (QObject::tr("Введіть пароль"));
     ui-> password-> setEchoMode (QLineEdit :: Password);
 
     database = QSqlDatabase::addDatabase("QMYSQL", "MyConnect");

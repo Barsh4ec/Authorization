@@ -70,7 +70,7 @@ public:
     QString money;
     QString mas[15][2] = { {"green", "0"}, {"red", "1"}, {"black", "8"}, {"red", "2"}, {"black", "9"}, {"red", "3"}, {"black", "10"}, {"red", "4"},
                            {"black", "11"}, {"red", "5"}, {"black", "12"}, {"red", "6"}, {"black", "13"}, {"red", "7"}, {"black", "14"} };
-    QString history[8][2] = { {"#544475", ""}, {"#544475", ""}, {"#544475", ""}, {"#544475", ""}, {"#544475", ""}, {"#544475", ""}, {"#544475", ""}, {"#544475", ""} };
+    QString history[8][2] = { {"transparent", ""}, {"transparent", ""}, {"transparent", ""}, {"transparent", ""}, {"transparent", ""}, {"transparent", ""}, {"transparent", ""}, {"#544475", ""} };
     void Speen_Wheel(int);
     int MakeTime(int, int);
     void Timer(int);

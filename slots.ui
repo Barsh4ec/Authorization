@@ -31,7 +31,8 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color:#14C38E;</string>
+        <string notr="true">background: #92BA92;
+border-radius: 10px;</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -198,19 +199,6 @@ QPushButton:hover {
          </property>
         </widget>
        </item>
-       <item>
-        <spacer name="horizontalSpacer_11">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>17</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
       </layout>
      </item>
      <item>
@@ -243,7 +231,7 @@ QPushButton:hover {
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: #14C38E;
+          <string notr="true">background: #92BA92;
 border-radius:15px;</string>
          </property>
          <property name="frameShape">
@@ -422,7 +410,7 @@ border-radius:10px;</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color:#14C38E;
+          <string notr="true">background: #92BA92;
 border-radius:15px;</string>
          </property>
          <property name="frameShape">

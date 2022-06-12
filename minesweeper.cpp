@@ -2,6 +2,7 @@
 #include "ui_minesweeper.h"
 #include <QDebug>
 #include <QPixmap>
+#include <QMessageBox>
 
 int empty_fields = 0;
 bool start_stop = false;
@@ -541,4 +542,9 @@ void Minesweeper::RecoverButtons()
     ui->b5_3->setStyleSheet("background-image:");
     ui->b5_3->setStyleSheet("background-color: rgb(46, 229, 157)");
     ui->b5_3->setEnabled(true);
+}
+
+void Minesweeper::on_info_clicked()
+{
+    QMessageBox::about(this, "Інформація", "Minesweeper - логічна головоломка з елементами тактики. Вам належить насолоджуватися класичним зовнішнім виглядом гри, де головне відкривати квадратики і не потрапити на міну.");
 }

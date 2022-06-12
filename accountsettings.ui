@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>580</width>
-    <height>604</height>
+    <height>603</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -267,8 +267,8 @@ QPushButton:hover {
              </property>
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
-               <bold>true</bold>
+               <pointsize>10</pointsize>
+               <bold>false</bold>
                <underline>false</underline>
                <strikeout>false</strikeout>
               </font>
@@ -342,8 +342,8 @@ QPushButton:hover {
              </property>
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
-               <bold>true</bold>
+               <pointsize>10</pointsize>
+               <bold>false</bold>
                <underline>false</underline>
                <strikeout>false</strikeout>
               </font>
@@ -417,8 +417,8 @@ QPushButton:hover {
              </property>
              <property name="font">
               <font>
-               <pointsize>9</pointsize>
-               <bold>true</bold>
+               <pointsize>8</pointsize>
+               <bold>false</bold>
                <underline>false</underline>
                <strikeout>false</strikeout>
               </font>
@@ -460,8 +460,8 @@ QPushButton:hover {
              </property>
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
-               <bold>true</bold>
+               <pointsize>10</pointsize>
+               <bold>false</bold>
                <underline>false</underline>
                <strikeout>false</strikeout>
               </font>

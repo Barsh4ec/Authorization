@@ -54,7 +54,6 @@ void AddMoney::balance_func(QString amount, QString promo, QString bill){
 void AddMoney::slot(QString a)
 {
     login = a;
-    qDebug() << login;
     QString s = "SELECT balance from caligula_users.Users WHERE login="+login+";";
     QSqlQuery query = database.query_func(s);
     query.first();

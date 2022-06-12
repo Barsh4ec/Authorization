@@ -75,6 +75,8 @@ private slots:
 
     void on_b5_3_clicked();
 
+    void on_info_clicked();
+
 public slots:
     void slot(QString a);
 

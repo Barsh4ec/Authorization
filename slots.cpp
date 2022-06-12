@@ -32,7 +32,7 @@ void Slots::on_StartGame_clicked()
     if(is_started == true)
         return;
     stavka = ui->summa_stavky->text();
-    if ((stavka.toDouble()) <= this->money.toDouble() && stavka != "0" )
+    if ((stavka.toDouble()) <= this->money.toDouble() && stavka.toDouble() != 0 )
     {
         ui->warning->setText("");
     } else {

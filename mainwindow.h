@@ -52,6 +52,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_refresh_clicked();
+
 signals:
     void roulettesignal(QString, QString);
     void slotssignal(QString, QString);
